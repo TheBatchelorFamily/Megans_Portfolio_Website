@@ -1,0 +1,181 @@
+/* Base Stylings */
+body {background-color:#f0f1f2;color:#045498;font-size:16px;font-family:Segoe, "Segoe UI", Arial, "Trebuchet MS", sans-serif;}
+h1 {margin-left:25px;font-size:40px;margin-bottom:15px;}
+footer {margin-top:15px;background-color:#6a737b;padding:15px;color:white;}
+footer a {color:white;}
+footer a:hover {text-decoration:none;}
+
+/* Page Stylings */
+.about {font-size:12px;padding-right:5px;padding-left:5px;}
+.accordionImg {width:20%;float:left;margin:10px;}
+.blogMenuBox {background-color:#e7f1fa;border-radius:25px;padding:15px;}
+.blogMenuItem {list-style-image:none;list-style-type:none;}
+.blogPost {background-color:white;border-radius:25px;padding:10px;}
+.boxLink{color:#045498;}
+.boxLink h1:hover, .boxLink h1:active {text-decoration:none;color:white;}
+.bold {font-weight:bold;}
+.calcOutput {font-weight:bold;font-size:24px;}
+#pOResults {border:1px solid #f7901e; padding:5px;}
+#resultsHighlight {background-color:#139c36; color:white;}
+.formInput {text-align: right;}
+/*li {list-style-image:url('../img/ccLI.png');list-style-position:inside;margin-bottom:5px;}*/
+.clientScrollBox {background-color:#f2f8fd;margin-top:20px;height:200px;}
+.headerImage {width:100%;height:350px;border-top: 5px solid #045498;border-bottom:5px solid #045498;box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;margin-left:0px;margin-bottom:50px;background:transparent url('../img/ccBlue3_2.jpg') repeat-x;}
+.headerImageBusiness {width:100%;height:350px;border-top: 5px solid #f7901e;border-bottom:5px solid #f7901e;box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;margin-left:0px;margin-bottom:50px;background:transparent url('../img/ccBlue3_2.jpg') repeat-x;}
+.headerImageConsumer {width:100%;height:350px;border-top: 5px solid #7fbb42;border-bottom:5px solid #7fbb42;box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;margin-left:0px;margin-bottom:50px;background:transparent url('../img/ccBlue3_2.jpg') repeat-x;}
+.headerImageServices {width:100%;height:350px;border-top: 5px solid #7c2b83;border-bottom:5px solid #7c2b83;box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;	margin-left:0px;margin-bottom:50px;background:transparent url('../img/ccBlue3_2.jpg') repeat-x;}
+.headerImageVirtual {width:100%;*height:150px;border-top: 5px solid #045498;border-bottom:5px solid #045498;box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;margin-left:auto;margin-right:auto;margin-bottom:15px;background:transparent url('../img/bgHeader.png') repeat;}
+.headerImage h1 {padding-top:50px;}
+.headerImage img {max-height:345px;}
+.infoBox {background-color:#045498;height:200px;border-radius:25px;text-align:center;color:white;}
+.infoBox a {text-decoration:none;}
+.infoBox a:hover {color:#045498;}
+.nav {background-color:white;padding-top:5px;width:100%;}
+.nav li {display:inline;list-style-type:none;float:left;*padding-top: 15px;padding-left:40px;}
+.nav li a {color:#045498;text-decoration:none;font-size:24px;}
+#navLogo {display:inline;float:left;margin-left:165px;margin-right:200px;}
+#navWrapper {width:100%;}
+.pageBox {padding:10px;}
+.pageSubBox, .pageSubBox3 {background-color:#f2f8fd;text-align:center;display:inline;height:150px;border-radius:25px;margin-bottom:10px;}
+.pageSubBox2 {background-color:#f2f8fd;text-align:left;height:50px;border-radius:25px;padding:10px;margin-bottom:10px;}
+.pageSubBox4 {background-color:transparent;height:250px;border-radius:25px;}
+.pageBoxLink {background-color:white;text-align:center;display:inline;border-radius:15px;height:85px;margin-bottom:10px;}
+.prWrapper {background-color:white;border-radius:25px;}
+.prWrapper h1,h2,h3,h4,h5,h6 {text-align:center;}
+.pr {padding-right:10px;padding-left:10px;}
+.section {margin-top:68px;padding-top:10px;}
+.section2 {margin-top:45px;}
+.sectionBox {background-color:#f2f8fd;border-radius:25px;*padding:15px;}
+.sectionBox p{margin:10px;}
+.sectionSubBox {background-color:#f2f8fd;text-align:center;display:inline;height:200px;border-radius:25px;}
+.sectionSubBox2 {background-color:#f2f8fd;text-align:center;display:inline;height:160px;border-radius:25px;}
+.sectionTwo {background-color:white;}
+.smBox {background-color:#f2f8fd;text-align:center;height:350px;border-radius:25px;}
+.smBoxBlog {background-color:#f2f8fd;text-align:justify;height:350px;border-radius:25px;}
+.smBoxBlog p {padding:10px;}
+.smBoxBlog h5 {padding-left:10px;}
+.smBox a, .smBoxBlog a {color:#045498;}
+.smBox h3:hover, .smBoxBlog h3:hover, .smBoxBlog h3:active, .smBox h3:active {color:#cfe3f4;}
+.vclink {color:#f8900a; text-decoration:underline;}
+.vipImg {width:175px;margin-top:40px;}
+.virtualText {text-align: justify;}
+.webLead input {margin-bottom:10px;}
+.webLead btn {/*margin-top:20px;*/}
+
+/* Font Awesome Icons manipulations */
+.fa {color:#69bcd7;}
+.fa:hover, .fa:active, .pageSubBox .fa:hover, .pageSubBox .fa:active, .pageSubBox2 .fa:hover, .pageSubBox2 .fa:active, .sectionSubBox .fa:hover, .sectionSubBox .fa:active, .pageSubBox3 .fa:hover, .pageSubBox3 .fa:active {color:#045498;}
+.fa-star, .fa-question-circle, .fa-trophy {font-size: 7em;}
+.fa-twitter, .fa-facebook {margin-right:15px;font-size:4em;}
+.fa-linkedin, .fa-google-plus {font-size:4em;}
+.pageSubBox .fa {font-size:7em;}
+.pageSubBox2 .fa {vertical align:center;margin-bottom:20px;}
+.pageSubBox3 .fa {font-size:5em;}
+.sectionSubBox .fa {font-size:7em;}
+.infoBox .fa{color:white;}
+
+/* Bootstrap manipulations */
+.navbar .nav>li>a.indexLink {padding-left:0px;}
+ul.list-inline a{color:black;}
+ul.list-inline a:hover{color:firebrick;}
+ul.list-inline .btn{padding-left: 0px;padding-right: 0px;border: 0px;margin-right:-2px;}
+button.linkedInButton {box-shadow:none;margin-left:15px;margin-bottom:10px;background-color:#69bcd7;border: 3px solid #69bcd7;background-image: url('../img/pageImgs/Logo-21px-R.png');}
+button.linkedInButton:hover {background-color:#69bcd7;}
+.input-append, .input-prepend {margin-bottom:0px;}
+.table th, .table td {border-top:none;}
+
+/* Print properties */ 
+@media screen {
+  #printSection {display: none;}
+}
+
+@media print {
+  body * {
+    visibility:hidden;
+  }
+  
+}
+@media print{
+	* {font-size:10pt!important;display:inherit!important;}
+	img {width:15%;display:inline;}
+	.infoBox{border:1px solid black;} 
+	.sectionSubBox{border:1px solid black;}
+	#printSection, #printSection * {visibility:visible;}
+  	#printSection {position:absolute;left:0;top:0;}
+	/*.span1 {width:51px;padding:0px;margin:0px;}
+	.span2 {width:102px;padding:0px;margin:0px;}
+	.span3 {width:153px;padding:0px;margin:0px;}
+	.span4 {width:204px;padding:0px;margin:0px;}
+	.span5 {width:255px;padding:0px;margin:0px;}
+	.span6 {width:306px;padding:0px;margin:0px;}
+	.span7 {width:357px;padding:0px;margin:0px;}
+	.span8 {width:408px;padding:0px;margin:0px;}
+	.span9 {width:459px;padding:0px;margin:0px;}
+	.span10 {width:510px;padding:0px;margin:0px;}
+	.span11 {width:561px;padding:0px;margin:0px;}
+	.span12 {width:612px;padding:0px;margin:0px;}*/
+}
+
+/* Simple Scroll */
+/* Container DIV - automatically generated */
+.simply-scroll-container {position: relative;}
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {position: relative;overflow: hidden;
+}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {overflow: hidden;margin: 0;padding: 0;list-style: none;}
+.simply-scroll-list li {padding: 0;margin: 0;list-style: none;}
+.simply-scroll-list li img {border: none;display: block;}
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+
+/* Container DIV */
+.simply-scroll {background-color:#f2f8fd;height: 300px;border-radius:25px;margin-bottom: 1em;}
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {/*width: 576px;*/height: 300px;}
+	
+/* Explicitly set height/width of each list item */	
+.simply-scroll .simply-scroll-list li {float: left; /* Horizontal scroll only */width: 285px;height: 300px;margin-top:55px;margin-left:35px;}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+	body {/* padding-top:77px; static-top Nav Bar Height*/}
+	.mobileImg {margin-top:50px;}
+	.gdImg {margin-top:0px;	}
+	.headerImage img {margin-top:5px;}
+}
+@media (max-width: 800px) {
+	body {padding-top:5px; /* No static-top Nav Bar */font-size:15px;}
+	.section {margin-top:25px;padding-top:10px;}
+	.pageSubBox4 {height:150px;}	
+	h3 {font-size:20px;}
+	h1 {font-size:32px;}
+}
+@media (max-width:699px) {
+	.mobileImg {width:80%;margin-left:10%;}
+	.mImgFix {width:150px;height:150px;}
+}
+
+@media (min-width:768px) and (max-width:1280px) {
+	.nav li {padding-left:20px;}
+	.nav li a {font-size:20px;}
+
+}
+
+/* Tablet Stylings */
+#imgLink {padding-top:10px;padding-bottom:10px;padding-right:50px;margin-left:-20px;}
+.navLink {margin-right:10px;margin-top:5px;font-size:1.2em;}
+.tabNav {background-color:white;margin-top:5px;border-radius:25px;}
+.tabNav li {list-style:none;padding:5px;float:left;}
+
+/* Mobile Stylings */
+.mNav {background-color:white;height:625px;margin-top:0px;}
+.mNav2 {background-color:white;margin-top:0px;}
+.mNavButton {text-align:center;display:block;background-color:#e7f1fa;color:#045498;font-size:22px;margin-top:25px;margin-bottom:5px;margin-left:15px;margin-right:15px;padding:15px;}
+.mNavButton2 {text-align:center;display:block;background-color:white;color:#045498;font-size: 22px;margin-top:25px;margin-bottom:5px;margin-left:15px;margin-right:15px;padding:15px;}

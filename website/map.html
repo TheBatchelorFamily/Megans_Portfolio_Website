@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Batchelor Consulting &amp; Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Consulting and web design in the heart of the plains Kansas City" />
+	<meta name="keywords" content="freelance, consulting, web development, web design, bootstrap, html5, css3, mobile first, responsive, kansas city, KC" />
+	<meta name="author" content="Megan Batchelor" />
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet" type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="cssNew/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="cssNew/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="cssNew/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="cssNew/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="cssNew/bootstrap.css">
+    <!-- Main Styles -->
+	<link rel="stylesheet" href="cssNew/style.css">
+	<!-- Map Styles -->
+	<link rel="stylesheet" href="cssNew/map.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="jsNew/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="jsNew/respond.min.js"></script>
+	<![endif]-->
+
+<!-- Marker Cluster 
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script> -->
+
+	</head>
+	<body>
+	    
+<script>
+      // This example adds a search box to a map, using the Google Place Autocomplete
+      // feature. People can enter geographical searches. The search box will return a
+      // pick list containing a mix of places and predicted search terms.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var label = 'CLICK_NEAR_ME_NOT_ON_ME';
+      var src = 'http://www.theplugkcps.org/googleMapsKML/elementaryModified_V4_4.kml';
+	  
+	  function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('googlemap'), {
+          center: {lat: 39.07354, lng: -94.57055},
+          zoom: 11,
+          mapTypeId: 'roadmap'
+        });
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              label: label,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+        // Add school markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "schools" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markersSchool = schools.map(function(school, i) {
+          return new google.maps.Marker({
+            position: {lat: school[1], lng: school[2]},
+		       map: map,
+                       title: school[0]
+                       });
+        });
+        // Add a marker clusterer to manage the markers.
+  new MarkerClusterer({ markers, map });
+
+        /* Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markersSchool,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});*/
+			
+	//Elementary school KML layer display
+	var kmlLayer = new google.maps.KmlLayer(src, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+		
+        kmlLayer.addListener('click', function(event) {
+          var content = event.featureData.infoWindowHtml;
+          var testimonial = document.getElementById('capture');
+          testimonial.innerHTML = content;
+        });
+
+      }
+      //Data for the markers consisting of a name, a LatLng for the order
+      //in which these markers should display
+      var schools = [
+	['Southeast High School', 39.00871, -94.54585],
+	['Central High School', 39.06677, -94.54195],
+        ['East High School', 39.08821, -94.54166],
+        ['Northeast High School', 39.1084, -94.52529],
+        ['Northeast Middle School', 39.06682, -94.5242],
+        ['Central Middle School', 39.06685, -94.54025],
+        ['Benjamin Banneker Elementary School', 38.99904, -94.54584],
+        ['Faxon Elementary School', 39.06828, -94.56812],
+        ['Primitivo Garcia Elementary School', 39.09427, -94.59565],
+        ['Garfield Elementary School', 39.10894, -94.55217],
+        ['Gladstone Elementary School', 39.11586, -94.52721],
+        ['Hale Cook Elementary School', 38.99541, -94.59694],
+        ['Hartman Elementary School', 38.98055, -94.58479],
+        ['James Elementary School', 39.11442, -94.51325],
+        ['Martin Luther King, Jr. Elementary School', 39.03894, -94.56509],
+        ['Longfellow Elementary School', 39.07471, -94.57708],
+        ['George Melcher Elementary School', 39.0537, -94.52824],
+        ['Pitcher Elementary School', 39.05234, -94.46387],
+        ['J.A. Rogers Elementary School', 39.08385, -94.50754],
+        ['Trailwoods Elementary School', 39.08891, -94.50975],
+        ['Troost Elementary School', 39.01922, -94.57235],
+        ['Wendell Phillips Elementary School', 39.08234, -94.55256],
+        ['Wheatley Elementary School', 39.08227, -94.544703],
+        ['Whittier Elementary School', 39.10034, -94.5415],
+        ['Lincoln College Preparatory Academy', 39.08705, -94.56033],
+        ['Paseo Academy of Fine and Performing Arts', 39.0394, -94.56518],
+        ['African-Centered College Preparatory Academy Lower Campus', 39.00965, -94.54327],
+        ['Border Star Montessori', 39.01322, -94.59267],
+        ['George Washington Carver Dual Language School', 39.04193, -94.53216],
+        ['Foreign Language Academy', 39.06408, -94.58373],
+        ['Harold Holliday, Sr. Montessori', 38.99477, -94.53754],
+        ['Success Academy at Knotts', 38.99403, -94.53704],
+        ['Success Academy at Anderson', 39.09375, -94.56873],
+        ['Richardson Early Learning Community School', 39.06214, -94.55612],
+        ['Manual Career and Technical Center', 39.09472, -94.56802],
+        ['Woodland Early Learning Community School', 39.10429, -94.5591],
+		];
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRQhxHPxmfIZ_YvsX7zL8pDHH67bY0wA0&libraries=places&callback=initAutocomplete" async defer></script>
+     <script src="/js/markercluster.js"></script> 
+
+<html>
+	<section id="fh5co-work" data-section="explore">
+		<div class="container">
+				<div class="row-bottom-padded-md section-heading text-center">
+					<h2 class="animated fadeInUp">Neighborhood School Search</h2>
+					<p><input id="pac-input" class="controls" type="text" placeholder="Search Box"/></p>
+					<div>
+						<h3>Directions:</h3>
+						<ol style="text-align:left;">
+							<li>Start to put your address into the search box below - choices should start appearing while you type your address.</li>
+							<li>Select your address from the choices that appear</li>
+							<li>The map will center to the address that you have selected</li>
+							<li>Click near the marker for your address (but not directly on the marker)</li>
+							<li>Your neighborhood elementary, middle and high schools will appear on the right</li>
+						</ol>
+					</div>
+<p style="color: red; font-weight: bold;">If you do not see a map displayed below, refresh the page before trying to search.</p>
+					<div id="googlemap"> </div>
+					<div id="capture"><h3>School Search Result:</h3> </div>
+</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+</html></span></div> 
+<div class="clear"></div>
+</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
