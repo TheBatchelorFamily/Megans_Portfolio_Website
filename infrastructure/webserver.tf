@@ -32,7 +32,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" 
 }
 
 module "aws_webserver_network" {
-  source       = "git@github.com:TheBatchelorFamily/SharedTerraform.git//modules/aws_webserver_network?ref=module_build"
+  source       = "https://github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_webserver_network?ref=module_build"
   dnsName      = var.dnsName
   r53Enabled   = true
   region       = var.region
@@ -46,7 +46,7 @@ module "aws_auto_scale" {
   keyname       = var.keyname
   publicIP      = true
   securityGroup = [module.aws_webserver_network.aws_security_group_id]
-  source        = "git@github.com:TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=module_build"
+  source        = "https://github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=module_build"
   sshPub        = file(var.sshPub)
   subnet        = var.subnet
   tags          = var.tags
