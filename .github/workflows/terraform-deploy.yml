@@ -1,0 +1,19 @@
+---
+name: Terraform Deploy
+
+on:
+  push:
+    branches: [stage]
+    paths:
+    - infrastructure
+    - .github/workflows/terraform-deploy.yml
+  workflow_dispatch:
+
+jobs:
+  Terraform_Deploy:
+    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@main
+    with:
+      checkoutBranch: stage
+      workingDirectory: ./infrastructure/
+    secrets:
+      AWS_SECRETS: ${{ secrets.AWS_SECRETS }}

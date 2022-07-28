@@ -5,19 +5,16 @@ variable itype {
     default = "t2.micro"
 }
 variable keyname {
-    default = "webserver-key"
+    default = "itsmeganificent-key"
 }
 variable region {
     default = "us-east-1"
 }
 variable secgroupname {
-    default = "Webserver-Sec-Group"
-}
-variable secGroups {
-    default = ["Webserver-Sec-Group"]
+    default = "itsmeganificent-Group"
 }
 variable sshIP {
-    default = ["136.37.117.0/24"]
+    default = ["136.32.167.156/32"]
 }
 variable sshPub {
     default = "./webserver.pub"
@@ -26,7 +23,7 @@ variable subnet {
     default = "subnet-0beea67bf6470d712"
 }
 variable tags {
-    default = { Name = "Webserver" }
+    default = { Name = "itsmeganificent" }
     description = "Tags to apply to created resources"
 }
 variable vpc {
