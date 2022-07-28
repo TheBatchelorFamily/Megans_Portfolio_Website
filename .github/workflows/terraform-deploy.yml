@@ -16,5 +16,3 @@ jobs:
       checkoutBranch: stage
       workingDirectory: ./infrastructure/
     secrets: inherit
-    # secrets:
-    #   AWS_SECRETS: ${{ secrets.AWS_SECRETS }}
