@@ -15,5 +15,5 @@ jobs:
     with:
       checkoutBranch: stage
       workingDirectory: ./infrastructure/
-    secrets:
-      AWS_SECRETS: ${{ secrets.AWS_SECRETS }}
+    # secrets:
+    #   AWS_SECRETS: ${{ secrets.AWS_SECRETS }}
