@@ -18,6 +18,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
+  #ts:skip=AC_AWS_0214 Enabling S3 versioning
   bucket = "terraform-itsmeganificent"
 }
 
