@@ -3,7 +3,7 @@ name: Terraform Deploy
 
 on:
   push:
-    branches: [stage]
+    branches: [main]
     paths:
     - infrastructure/*
     - .github/workflows/terraform-deploy.yml
@@ -13,6 +13,6 @@ jobs:
   Terraform_Deploy:
     uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@main
     with:
-      checkoutBranch: stage
+      checkoutBranch: main
       workingDirectory: ./infrastructure/
     secrets: inherit
