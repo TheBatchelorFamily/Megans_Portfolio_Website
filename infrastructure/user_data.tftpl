@@ -1,0 +1,17 @@
+#!/bin/bash
+export CONTAINER INSTANCE_ID ALLOC_ID AWS_DEFAULT_REGION
+CONTAINER='fiercekitti/portfolio_website'
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+# shellcheck disable=SC2154
+ALLOC_ID="${eipID}"
+# shellcheck disable=SC2154
+AWS_DEFAULT_REGION="${region}"
+
+set -ex
+sudo yum update -y
+sudo amazon-linux-extras install docker -y
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+docker pull $CONTAINER
+docker run -it -d -p 80:80 $CONTAINER
+aws ec2 associate-address --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --allow-reassociation
