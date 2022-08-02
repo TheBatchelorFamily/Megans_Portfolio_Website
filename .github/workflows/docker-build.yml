@@ -24,8 +24,8 @@ jobs:
     
       - name: Build the Docker image
         run: |
-        docker build website/
-         --tag "${{secrets.DOCKER_USER}}/portfolio_website:latest"
+          docker build website/ \
+            --tag "${{secrets.DOCKER_USER}}/portfolio_website:latest"
 
       - name: Push the Docker image
         run: docker push ${{secrets.DOCKER_USER}}/portfolio_website
