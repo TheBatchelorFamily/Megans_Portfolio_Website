@@ -6,6 +6,7 @@ on:
     paths: 
     - website/*
     - .github/workflows/docker-build.yml
+    paths-ignore: [ 'website/*.md' ]
 
 jobs:
   build_and_push:
