@@ -47,7 +47,7 @@ rules:
     - error
     - 2
     - MemberExpression: 'off'
-    SwitchCase: 1
+    - SwitchCase: 1
   max-params:
     - warn
     - 5

@@ -2,8 +2,8 @@
 
 
 ## Description
-This is a fairly simple [Terraform](https://www.terraform.io/) setup that utilizes some standardized modules from the [SharedTerraform](TheBatchelorFamily/SharedTerraform) repository. 
-This allows some of the complexity to be abstracted, and also provides for a more standardized modular approach to deployment. 
+This is a fairly simple [Terraform](https://www.terraform.io/) setup that utilizes some standardized modules from the [SharedTerraform](TheBatchelorFamily/SharedTerraform) repository.
+This allows some of the complexity to be abstracted, and also provides for a more standardized modular approach to deployment.
 With the added modularity, it will be easier to safely deploy another containerized app at some point in the future, and have both benefit from various enhancements and security updates.
 
 ## State file
@@ -31,7 +31,7 @@ Prior to deploying the default variable values should be verified, and any varia
 This is very straightforward and done in the `variableName = "variable value"` format. Alternatively the default values can simply be updated in the variables.tf file if the change should ultimately be permanent.
 
 ### Automated Deployment
-This configuration is intended to be deployed in an automated fashion, utilizing the [Terraform Deploy](../.github/workflows/terraform-deploy.yml). 
+This configuration is intended to be deployed in an automated fashion, utilizing the [Terraform Deploy](../.github/workflows/terraform-deploy.yml).
 This job will automatically run if a change is made to a file within the "infrastructure" directory, or if the workflow definition for the action itself is modified.
 
 Its possible that a deployment will need to be made with no changes.
