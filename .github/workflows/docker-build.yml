@@ -1,12 +1,13 @@
+---
 name: Docker Image CI
 
 on:
   push:
     branches: [ main ]
     paths: 
-    - website/*
-    - .github/workflows/docker-build.yml
-    paths-ignore: [ 'website/*.md' ]
+    - 'website/*'
+    - '!website/*.md'
+    - '.github/workflows/docker-build.yml'
 
 jobs:
   build_and_push:

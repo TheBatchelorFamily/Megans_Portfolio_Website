@@ -3,11 +3,11 @@ name: Terraform Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
     paths:
-    - infrastructure/*
-    - .github/workflows/terraform-deploy.yml
-    paths-ignore: [ 'infrastructure/*.md' ]
+      - 'infrastructure/*'
+      - '!infrastructure/*.md'
+      - '.github/workflows/terraform-deploy.yml'
   workflow_dispatch:
 
 jobs:

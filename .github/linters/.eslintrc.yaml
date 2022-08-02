@@ -41,33 +41,33 @@ rules:
   arrow-body-style: 'off'
   capitalized-comments: 'off'
   comma-dangle:
-  - error
-  - never
+    - error
+    - never
   indent:
-  - error
-  - 2
-  - MemberExpression: 'off'
+    - error
+    - 2
+    - MemberExpression: 'off'
     SwitchCase: 1
   max-params:
-  - warn
-  - 5
+    - warn
+    - 5
   multiline-ternary:
-  - error
-  - always-multiline
+    - error
+    - always-multiline
   new-cap:
-  - error
-  - properties: false
+    - error
+    - properties: false
   no-console: error
   no-negated-condition: 'off'
   object-curly-spacing:
-  - error
-  - always
+    - error
+    - always
   operator-linebreak:
-  - error
-  - after
+    - error
+    - after
   semi:
-  - error
-  - never
+    - error
+    - never
   unicorn/explicit-length-check: 'off'
   unicorn/no-array-callback-reference: 'off'
   unicorn/no-array-method-this-argument: 'off'
@@ -81,11 +81,11 @@ rules:
   unicorn/prevent-abbreviations: 'off'
 
 extends:
-- plugin:import/errors
-- plugin:import/warnings
-- plugin:unicorn/recommended
-- xo
-- xo/browse
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:unicorn/recommended
+  - xo
+  - xo/browse
 
 ##############################
 # Overrides for JSON parsing #
