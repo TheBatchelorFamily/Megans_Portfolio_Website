@@ -1,0 +1,120 @@
+---
+#############################
+#############################
+## JavaScript Linter rules ##
+#############################
+#############################
+
+############
+# Env Vars #
+############
+env:
+  browser: true
+  es6: true
+  jest: true
+
+###############
+# Global Vars #
+###############
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+
+###############
+# Parser vars #
+###############
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+
+###########
+# Plugins #
+###########
+plugins:
+  - '@typescript-eslint'
+
+#########
+# Rules #
+#########
+rules:
+  arrow-body-style: 'off'
+  capitalized-comments: 'off'
+  comma-dangle:
+    - error
+    - never
+  indent:
+    - error
+    - 2
+    - MemberExpression: 'off'
+    - SwitchCase: 1
+  max-params:
+    - warn
+    - 5
+  multiline-ternary:
+    - error
+    - always-multiline
+  new-cap:
+    - error
+    - properties: false
+  no-console: error
+  no-negated-condition: 'off'
+  object-curly-spacing:
+    - error
+    - always
+  operator-linebreak:
+    - error
+    - after
+  semi:
+    - error
+    - never
+  unicorn/explicit-length-check: 'off'
+  unicorn/no-array-callback-reference: 'off'
+  unicorn/no-array-method-this-argument: 'off'
+  unicorn/no-null: 'off'
+  unicorn/no-unused-properties: error
+  unicorn/prefer-array-flat: 'off'
+  unicorn/prefer-dom-node-dataset: 'off'
+  unicorn/prefer-module: 'off'
+  unicorn/prefer-query-selector: 'off'
+  unicorn/prefer-spread: 'off'
+  unicorn/prevent-abbreviations: 'off'
+
+extends:
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:unicorn/recommended
+  - xo
+  - xo/browse
+
+##############################
+# Overrides for JSON parsing #
+##############################
+overrides:
+
+  # JSON files
+  - files:
+      - "*.json"
+    extends:
+      - plugin:jsonc/recommended-with-json
+    parser: jsonc-eslint-parser
+    parserOptions:
+      jsonSyntax: JSON
+
+  # JSONC files
+  - files:
+      - "*.jsonc"
+    extends:
+      - plugin:jsonc/recommended-with-jsonc
+    parser: jsonc-eslint-parser
+    parserOptions:
+      jsonSyntax: JSONC
+
+  # JSON5 files
+  - files:
+      - "*.json5"
+    extends:
+      - plugin:jsonc/recommended-with-json5
+    parser: jsonc-eslint-parser
+    parserOptions:
+      jsonSyntax: JSON5

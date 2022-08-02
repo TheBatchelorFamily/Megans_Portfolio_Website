@@ -5,8 +5,9 @@ on:
   push:
     branches: [main]
     paths:
-    - infrastructure/*
-    - .github/workflows/terraform-deploy.yml
+      - 'infrastructure/*'
+      - '!infrastructure/*.md'
+      - '.github/workflows/terraform-deploy.yml'
   workflow_dispatch:
 
 jobs:
