@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main ]
     paths: [ 'website/*' ]
+    paths-ignore: [ 'website/*.md' ]
 
 jobs:
   build_and_push:
