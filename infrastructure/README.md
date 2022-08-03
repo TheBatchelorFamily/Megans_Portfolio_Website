@@ -2,7 +2,7 @@
 
 
 ## Description
-This is a fairly simple [Terraform](https://www.terraform.io/) setup that utilizes some standardized modules from the [SharedTerraform](TheBatchelorFamily/SharedTerraform) repository.
+This is a fairly simple [Terraform](https://www.terraform.io/) setup that utilizes some standardized modules from the [SharedTerraform](https://www.github.com/TheBatchelorFamily/SharedTerraform) repository.
 This allows some of the complexity to be abstracted, and also provides for a more standardized modular approach to deployment.
 With the added modularity, it will be easier to safely deploy another containerized app at some point in the future, and have both benefit from various enhancements and security updates.
 
@@ -14,10 +14,10 @@ The state file is now stored in an s3 bucket so that it is easy to clone the rep
   * This is currently only used to store the state file mentioned above.
 * [aws_s3_bucket_server_side_encryption_configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration)
   * Adding encryption to an s3 bucket requires a separate resource. For this deployment we are only using AES256 encryption.
-* [aws_webserver_network](TheBatchelorFamily/SharedTerraform)
+* [aws_webserver_network](https://www.github.com/TheBatchelorFamily/SharedTerraform)
   * This is a custom built module that can be found in the SharedTerraform repository.
   * The module sets up the security group, the elastic ip, and the route53 entries for www and non-www URLs.
-* [aws_auto_scale](TheBatchelorFamily/SharedTerraform)
+* [aws_auto_scale](https://www.github.com/TheBatchelorFamily/SharedTerraform)
   * This is a custom built module that can be found in the SharedTerraform repository.
   * With this module...
     * An ssh key pair is created
