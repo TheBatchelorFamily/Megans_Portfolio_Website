@@ -12,5 +12,5 @@ jobs:
       containerDirectory: 'website/'
       containerName: 'portfolio_website'
       containerRepo: 'fiercekitti'
-      containerVersion: ${{ github.ref }}
+      containerVersion: ${{ github.ref_name }}
     secrets: inherit
