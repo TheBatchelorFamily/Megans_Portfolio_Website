@@ -7,7 +7,7 @@ on:
 
 jobs:
   Container_Registration:
-    uses: TheBatchelorFamily/SharedGHA/.github/workflows/container_registration.yml@container_registration
+    uses: TheBatchelorFamily/SharedGHA/.github/workflows/container_registration.yml@1.0.0
     with:
       containerDirectory: 'website/'
       containerName: 'portfolio_website'
