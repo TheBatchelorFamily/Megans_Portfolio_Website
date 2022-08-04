@@ -11,6 +11,6 @@ jobs:
     with:
       containerDirectory: 'website/'
       containerName: 'portfolio_website'
-      containerRepo: secrets.DOCKER_USER
+      containerRepo: ${{ secrets.DOCKER_USER }}
       containerVersion: ${{ github.ref }}
     secrets: inherit
