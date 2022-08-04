@@ -4,10 +4,6 @@ name: Docker Image CI
 on:
   push:
     branches: [releases/**]
-    paths: 
-      - '.github/workflows/docker-build.yml'
-      - 'website/*'
-      - '!website/*.md'
 
 jobs:
   Container_Registration:
