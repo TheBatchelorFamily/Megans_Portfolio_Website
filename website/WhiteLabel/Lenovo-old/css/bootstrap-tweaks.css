@@ -1,0 +1,86 @@
+/* ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+    clear: none;
+  }
+  .navbar .nav-collapse .nav.pull-right {
+    float: right;
+    margin-right: 0;
+  }
+  .navbar .nav {
+    margin: 0 10px 0 0;
+  }
+  .nav-collapse .nav li {
+    float: left;
+  }
+  .navbar .btn-navbar {
+    display: none;
+  }
+  .span12 {
+    width: 694px;
+  }
+  .span6 {
+    width: 320px;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    width: 160px;
+  }
+  select {
+    width: 174px;
+  }
+  .form-horizontal .control-label {
+    width: 175px;
+  }
+  div.span12.row-line {
+    width: 724px;
+  }
+
+  #body .navbar.navbar-static-top .container {
+    width: 100% !important;
+  }
+
+  .checkout-order input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px;
+  }
+
+  span.checkbox-label {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+/* https://github.com/twitter/bootstrap/issues/2130#issuecomment-5782845 */
+@media (max-width: 480px) {
+  .modal {
+    position: fixed; /* Display modal in the centre of your screen */
+    height: 500px; /* Set a default max height of the modal (adjusted later) */
+    overflow-y: scroll; /*  Ensure that the modal is scroll-able */
+    -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS  */
+  }
+  .modal.fade.in{
+    top: 5px; /* Use more screen real estate */
+  }
+  .modal-body{
+    /* Increase the max height of the modal body to try & avoid both it,
+     * and the modal container having scroll bars which results in odd behavior */
+    max-height: 2400px;
+  }
+}
+
+/* Now adjust the height so it handles various screen sizes & orientations */
+
+/* You could make this as granular as you like, or have it more granular at common screen sizes
+ * but it should start at the height we set on .modal (i.e. 500px) & work down */
+@media (max-width: 480px) and (max-height: 500px){ .modal{ height: 450px; } }
+@media (max-width: 480px) and (max-height: 450px){ .modal{ height: 400px; } }
+@media (max-width: 480px) and (max-height: 400px){ .modal{ height: 350px; } }
+@media (max-width: 480px) and (max-height: 350px){ .modal{ height: 300px; } }
+@media (max-width: 480px) and (max-height: 300px){ .modal{ height: 250px; } }
+@media (max-width: 480px) and (max-height: 250px){ .modal{ height: 200px; } }
+@media (max-width: 480px) and (max-height: 200px){ .modal{ height: 150px; } }
+

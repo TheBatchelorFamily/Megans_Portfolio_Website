@@ -1,0 +1,25 @@
+﻿<div class="row">
+	<div class="col-sm-6 col-xs-12">
+		<label translate="FORMS.PROPERTIES.CREDIT_CARD_NUMBER"></label> <br/>
+		<span>************{{ paymentInformation.creditCardNumber.substring(12) }}</span>
+	</div>
+	<div class="col-sm-6 col-xs-12">
+		<label translate="FORMS.PROPERTIES.NAME_ON_CARD"></label><br/>
+		<span>{{ paymentInformation.nameOnCard }}</span>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-xs-12">
+		<label translate="FORMS.PROPERTIES.EXPIRY"></label><br/>
+		<span>{{paymentInformation.expiryMonth}}/{{paymentInformation.expiryYear}}</span>
+	</div>
+	<div class="col-sm-6 col-xs-12">
+		<div class="form-group">
+			<label translate="FORMS.PROPERTIES.CVV_CODE"></label><br/>
+			<span>{{paymentInformation.cvv}}</span>
+		</div>
+	</div>
+</div>

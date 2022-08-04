@@ -1,0 +1,80 @@
+﻿<form name="contactForm" novalidate="">
+	<div class="row">
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label for="firstName" translate="FORMS.PROPERTIES.FIRST_NAME"></label>
+				<input type="text" class="form-control" name="firstName" id="firstName" ng-model="contact.firstName" placeholder="{{'FORMS.PROPERTIES.FIRST_NAME' | translate}}" />
+			</div>
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label for="lastName" translate="FORMS.PROPERTIES.LAST_NAME"></label>
+				<input type="text" class="form-control" name="lastName" id="lastName" ng-model="contact.lastName" placeholder="{{ 'FORMS.PROPERTIES.LAST_NAME' | translate }}" />
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">&nbsp;</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label for="addressOne" translate="FORMS.PROPERTIES.ADDRESS_ONE"></label>
+				<input type="text" class="form-control" name="addressOne" id="addressOne" ng-model="contact.address1" placeholder="{{'FORMS.PROPERTIES.ADDRESS_ONE' | translate}}" />
+			</div>
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label for="addressTwo" translate="FORMS.PROPERTIES.ADDRESS_TWO"></label>
+				<input type="text" class="form-control" name="addressTwo" id="addressTwo" ng-model="contact.address2" placeholder="{{'FORMS.PROPERTIES.ADDRESS_TWO' | translate}}" />
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label for="city" translate="FORMS.PROPERTIES.CITY"></label>
+				<input type="text" class="form-control" name="city" id="city" ng-model="contact.city" placeholder="{{'FORMS.PROPERTIES.CITY' | translate}}" />
+			</div>
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label class="control-label" for="region">State</label>
+				<select class="form-control" name="region" id="region" ng-model="contact.state"
+						ng-options="region.regionKey as region.regionName for region in model.regions">
+					<option translate="GLOBAL.DEFAULT_SELECTION"></option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group">
+				<label class="control-label" for="postalCode" translate="FORMS.PROPERTIES.POSTAL_CODE"></label>
+				<input type="text" class="form-control" name="postalCode" id="postalCode" ng-model="contact.postalCode" placeholder="{{ 'FORMS.PROPERTIES.POSTAL_CODE' | translate }}" />
+			</div>
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<label for="country" translate="FORMS.PROPERTIES.COUNTRY"></label>
+			<select name="country" id="country" class="form-control"
+					ng-model="contact.country"
+					ng-change="model.countrySelectionChanged()"
+					ng-options="country as country.countryName for country in model.countries track by country.countryKey">
+				<option translate="GLOBAL.DEFAULT_SELECTION"></option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">&nbsp;</div>
+	</div>
+	<div class="row" ng-show="collectEmail">
+		<div class="col-xs-12">
+			<label for="email" translate="FORMS.PROPERTIES.EMAIL_ADDRESS"></label>
+			<input type="email" name="email" id="email" class="form-control" ng-pattern="/^(([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+)?$/" ng-model="customer.email" placeholder="{{ 'FORMS.PROPERTIES.EMAIL_ADDRESS' | translate}}" />
+			<p class="error" ng-show="contactForm.email.$error.email || contactForm.email.$error.pattern" translate="FORMS.VALIDATION_MESSAGES.EMAIL_INVALID"></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">&nbsp;</div>
+	</div>
+</form>

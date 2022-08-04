@@ -1,0 +1,87 @@
+﻿<div class="row">
+	<div class="col-xs-12">
+
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>Card Design</th>
+				<th>Ship To</th>
+				<th>Personalization</th>
+				<th>Amounts</th>
+			</tr>
+			<tr ng-repeat="anOrder in model.orders track by anOrder.index">
+				<td>
+					<img ng-src="{{anOrder.selectedCardDesign.imageUrl}}" class="img-responsive" /><br />
+					<button type="button" class="btn btn-primary btn-xs" ng-click="" ng-if="!model.isReadOnly">Edit</button>
+				</td>
+				<td>
+					<div>
+						<span>{{anOrder.shippingContact.firstName}} {{anOrder.shippingContact.lastName}}</span><br />
+						<span>{{anOrder.shippingContact.address1}}</span><br />
+						<span ng-show="anOrder.shippingContact.address2"><span>{{anOrder.shippingContact.address2}}</span><br /></span>
+						<span>{{anOrder.shippingContact.city}}, {{anOrder.shippingContact.state}} {{anOrder.shippingContact.postalCode}}</span>
+					</div>
+					<p>&nbsp;</p>
+					<div>
+						<span>{{anOrder.selectedShippingOption.description}}: {{anOrder.selectedShippingOption.amount | currency: '$'}}</span>
+					</div>
+					<p>&nbsp;</p>
+					<button type="button" class="btn btn-primary btn-xs" ng-click="" ng-if="!model.isReadOnly">Edit</button>
+				</td>
+				<td>
+					<div>
+						<span>To: {{anOrder.personalization.to}}</span><br />
+						<span>From: {{anOrder.personalization.from}}</span><br />
+						<span>Message: {{anOrder.personalization.message}}</span><br />
+					</div>
+					<p>&nbsp;</p>
+					<button type="button" class="btn btn-primary btn-xs" ng-click="" ng-if="!model.isReadOnly">Edit</button>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped">
+						<tr>
+							<th>Quantity</th>
+							<th>Amount</th>
+							<th ng-if="!model.isReadOnly">&nbsp;</th>
+						</tr>
+						<tr ng-repeat="lineItem in anOrder.lineItems">
+							<td>1</td>
+							<td>{{lineItem.amount | currency: '$'}}</td>
+							<td ng-if="!model.isReadOnly"><button type="button" class="btn btn-danger">Remove</button></td>
+						</tr>
+					</table>
+					<button type="button" class="btn btn-primary btn-xs" ng-click="" ng-if="!model.isReadOnly">Edit</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-9 col-sm-8 col-xs-5">&nbsp;</div>
+	<div class="col-md-3 col-sm-4 col-xs-7">
+		<table class="table">
+			<tr>
+				<td>Amount Total:</td>
+				<td>{{ model.orderTotal | currency: '$' }}</td>
+			</tr>
+			<tr>
+				<td>Activation Fee(s):</td>
+				<td>{{ model.feesTotal | currency: '$' }}</td>
+			</tr>
+			<tr>
+				<td>Shipping:</td>
+				<td>{{ model.shippingTotal | currency: '$' }}</td>
+			</tr>
+			<tr>
+				<td>Order Total:</td>
+				<td>{{ model.orderTotal + model.feesTotal + model.shippingTotal | currency: '$' }}</td>
+			</tr>
+		</table>
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">&nbsp;</div>
+</div>

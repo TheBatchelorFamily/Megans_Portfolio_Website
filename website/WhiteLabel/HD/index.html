@@ -1,0 +1,169 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js" lang="en"> <![endif]--><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Harley</title>
+    <meta name='description' content='Harley getmybalance and promo page mockup.' />
+    <meta name='keywords' content='getmybalance, gift card, gift cards, virtual gift card, virtual gift cards' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="yes">
+    <link rel="icon" href="favicon.ico">
+    
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    
+    <script src="js/modernizr-2.5.3.min.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+  	$(document).ready(function() {
+    		$('.carousel').carousel({
+      		    interval: 6000
+    		})
+  	});
+    </script>
+
+</head>
+
+<body> 
+<div class="container">  
+    <div class="row">
+    	
+    	    <div class="nav nav-fixed-top">
+    		<a href="#" target="_blank"><img src="img/logo.png" style="margin-left: 20px; float:left;"/></a>
+	    </div>
+
+    </div>
+    <div class="row">
+    	<div class="span12" style="background:#282528;">
+	    <ul class="nav">
+            	<li class="pull-left"><a href="index.html">HOME</a></li>
+                <li class="pull-left"><a href="#">MY CARDS</a></li>
+                <li class="pull-left"><a href="#">MY PROFILE</a></li>
+                <li class="pull-right" style="margin-right:15px;"><a class="btn btn-primary" href="#">CREATE ACCOUNT</a></li>
+		<li class="pull-right"><a class="btn btn-primary" href="#">LOGIN</a></li>
+		<li class="pull-right"><a href="#cardLookupModal" data-toggle="modal" data-target="#cardLookupModal">CHECK BALANCE</a></li>
+		
+	    </ul>
+	</div>
+    </div>
+    <div class="row">
+    	<div class="span12">	    
+    	    <div id="carousel" class="carousel slide" data-ride="carousel">
+	    	<!-- Indicators -->
+		<ol class="carousel-indicators">
+		    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel" data-slide-to="1"></li>
+		    <li data-target="#carousel" data-slide-to="2"></li>
+		    </ol>
+   		    <!-- Wrapper for slides -->
+		    <div class="carousel-inner">
+			<div class="item active">
+			   <img src="img/banner1.jpg" alt="H-D Gift Card Fueling Your Passion" style="width:100%;">
+			</div>
+			<div class="item">
+			    <a href="create.html"><img src="img/banner2.jpg" alt="Create an Account" style="width:100%;"></a>
+			</div>
+			<div class="item">
+			    <a href="#"><img src="img/banner3.jpg" alt="Wallet-Sized Freedom Give the Gift of Harley" style="width:100%;"></a>
+			</div>
+		    </div>
+	            <!-- Controls -->
+		    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">&lsaquo;</a>
+  		    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">&rsaquo;</a>
+		</div>
+	   </div>
+   	 </div>
+   	 <div class="row">
+   	    <div class="span12" style="background-color:#282528;">
+   	 	<div class="highlight offset1 span2">
+   	 	    <img src="img/gift.png" alt="gift box" />
+   	 	    <p><a href="promo.html">Got a promo code to redeem?</a></p>
+   	 	</div>
+   	 	<div class="highlight offset2 span2">
+   	 	    <img src="img/card.png" alt="gift card"  />
+   	 	    <p><a href="#">View and manage your gift card account</a></p>
+   	 	</div>
+   	 	<div class="highlight offset2 span2">
+   	 	    <img src="img/cash.png" alt="gift card balance"  />
+   	 	    <p><a href="#">Check out your gift card balance</a></p>
+   	 	</div>
+   	    </div>
+    	</div>
+
+	<div id="cardLookupModal" class="modal hide fade">
+		<form action="/Card" autocomplete="off" id="findCardForm" method="post" style="margin: 0"><input name="__RequestVerificationToken" type="hidden" value="cVa3evl-BTjXos2P7HsqWD9tFT9V2bUJzm2sY9jVDhXFaT1nI0kJ4e0v_HmYRkGw9JEIJ88z9mdP2wgpI9_13Eo8so04WH33SXsUwoVLxYCFdi9w0" />		
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>Check Balance</h3>
+		</div>
+		<div class="modal-body">
+			<p class="lead" style="margin-bottom: 30px">Your Harley-Davidson&reg; Gift Card has a unique 16-digit number and a 6-digit security code located on the back of the card. Enter the numbers below to check your balance.</p>
+			<div class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="PrintText">Card Number</label>		
+					<div class="controls">
+						<input class="span4" data-val="true" data-val-regex="Invalid card number. Please retry." data-val-regex-pattern="^[a-zA-Z0-9]{16}$" data-val-required="Card number is required." id="PrintText" maxlength="16" name="PrintText" placeholder="Card Number" type="text" value="" />
+						<div class="help-block">16-digit number without spaces.</div>
+						<div class="help-block error"><span class="field-validation-valid" data-valmsg-for="PrintText" data-valmsg-replace="true"></span></div>
+					</div>
+				</div>
+				<div class="control-group">
+        <label class="control-label" for="SecurityCode">Security Code</label>		
+	    <div class="controls">
+		    <input class="span4" data-val="true" data-val-required="Security code is required." id="SecurityCode" maxlength="6" name="SecurityCode" placeholder="Security Code" type="text" value="" />
+			<div class="help-block">6-digit number found on card back.</div>
+		    <div class="help-block error"><span class="field-validation-valid" data-valmsg-for="SecurityCode" data-valmsg-replace="true"></span></div>
+	    </div>
+    </div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary-other">Check Balance</button>
+			<button id="btnCancelCardLookup" class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		</div>
+	</div>
+    	<footer>
+    	    <div class="row">
+    	    	<div class="span12">
+    	    	    <div class="span2">
+    	    	    	<ul class="footer-links">
+    	    	    	    <li class="footer-links-header">Help</li>
+    	    	    	    <li>Gift Card Customer Service</li>
+    	    	    	    <li>Find a participating location</li>
+    	    	    	</ul>
+    	    	    </div>
+    	    	    <div class="span2">
+    	    	    	<ul class="footer-links">
+    	    	    	    <li class="footer-links-header">Shop H-D™</li>
+    	    	    	    <li>H-D™ Online Store</li>
+    	    	    	    <li>Find a Local Dealer</li>
+    	    	    	    <li>Buy an H-D™ Gift Card</li>
+    	    	    	</ul>
+    	    	    </div>
+    	    	    <div class="span3">
+    	    	    	<ul class="footer-links">
+    	    	    	    <li class="footer-links-header">Rewards</li>
+    	    	    	    <li>H-D™ Visa Card benefits</li>
+    	    	    	    <li>Apply Now</li>
+    	    	    	    <li>Redeem H-D™ Visa&reg Rewards</li>
+    	    	    	</ul>
+    	    	    </div>
+		</div>                            
+    	    </div>
+    	    <div class="row">
+    	        <div class="span12">
+    	    	    <p class="copyright">© 2015 Store Financial. All rights reserved. Payment Card Innovation.</p>
+    	    	    <p class="copyright">© H-D 2014. All rights reserved. Harley-Davidson, H-D, Harley and the Bar and Shield are among the trademarks of H-D U.S.A., LLC.</p>
+	    	</div>
+	    </div>
+   	</footer>
+    	<div class="clearfix"></div>
+    </div>
+</body>
+</html>
