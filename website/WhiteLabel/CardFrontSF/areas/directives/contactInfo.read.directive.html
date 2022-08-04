@@ -1,0 +1,10 @@
+﻿<div class="row">
+	<div class="col-xs-12">
+		{{contact.firstName}} {{contact.lastName}}<br/>
+		{{contact.address1}}<br/>
+		<span ng-if="contact.address2">{{contact.address2}}<br/></span>
+		{{contact.city}} {{contact.state}}, {{contact.postalCode}}
+		<span ng-if="contact.country">{{contact.country.countryName}}<br/></span>
+		{{customer.email}}
+	</div>
+</div>
