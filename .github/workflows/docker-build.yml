@@ -3,29 +3,18 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [main]
+    branches: [releases/**]
     paths: 
+      - '.github/workflows/docker-build.yml'
       - 'website/*'
       - '!website/*.md'
-      - '.github/workflows/docker-build.yml'
 
 jobs:
-  build_and_push:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-    
-      - name: Docker Login
-        uses: docker/login-action@v2.0.0
-        with:
-          username: ${{secrets.DOCKER_USER}}
-          password: ${{secrets.DOCKER_PASSWORD}}
-    
-      - name: Build the Docker image
-        run: |
-          docker build website/ \
-            --tag "${{secrets.DOCKER_USER}}/portfolio_website:latest"
-
-      - name: Push the Docker image
-        run: docker push ${{secrets.DOCKER_USER}}/portfolio_website
+  Container Registration:
+    uses: TheBatchelorFamily/SharedGHA/.github/workflows/container_registration.yml@container_registration
+    with:
+      containerDirectory: 'website/'
+      containerName: 'portfolio_website'
+      containerRepo: secrets.DOCKER_USER
+      containerVersion: ${{ github.ref }}
+    secrets: inherit
