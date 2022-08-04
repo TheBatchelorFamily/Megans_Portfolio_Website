@@ -58,6 +58,7 @@ rules:
     - error
     - properties: false
   no-console: error
+  no-mixed-spaces-and-tabs: 'off'
   no-negated-condition: 'off'
   object-curly-spacing:
     - error
