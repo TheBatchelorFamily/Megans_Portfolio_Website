@@ -19,5 +19,5 @@ A workflow has been created via GitHub Actions. This workflow is triggered when 
 The deployment process currently does not account for forcing the existing EC2 instance to pull the latest image. The user-data supplied to that instance simply pulls the latest tag on the time of its creation. We can manually force this by terminating the instance and a new EC2 instance will launch and pull the current image automatically via AWS auto scaling. In the future this should be automated. One way would be to simply terminate the instance via the command line with a GitHub action whenever a new image is pushed. Another might be to create a Lambda to perform this task that is triggered when a new image is pushed.
 
 ## Maintainers
-* [Megan Batchelor](@fiercekitti)(Front-End Developer)
-* [Chris Batchelor](@christsreturn)(DevOps Engineer)
+* [Megan Batchelor](https://github.com/fiercekitti)(Front-End Developer)
+* [Chris Batchelor](https://github.com/christhebatchelor)(DevOps Engineer)
