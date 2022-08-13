@@ -18,6 +18,8 @@ on:
   push:
     branches-ignore: [main]
     # Remove the line above to run when pushing to master
+    paths:
+      - '!website_old/**'
   pull_request:
     branches: [main]
 
