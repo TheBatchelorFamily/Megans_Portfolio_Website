@@ -1,7 +1,0 @@
-<div class="notification alert-dismissable" ng-class="notification.cssClass" ng-if="notification.visible">
-  <div class="alert" ng-class="notification.alertClass">
-	   <button type="button" class="close" ng-if="notification.showDismiss" ng-click="hideNotification()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <img ng-src="{{notification.spinnerUrl}}" ng-if="notification.showSpinner" /> 
-      <span translate="{{notification.translationId}}" translate-values="{{notification.translateValues}}">{{notification.message}}</span>
-  </div>
-</div>
