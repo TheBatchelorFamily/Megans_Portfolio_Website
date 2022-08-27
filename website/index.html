@@ -1,537 +1,603 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Batchelor Consulting &amp; Design</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Consulting and web design in the heart of the plains Kansas City" />
-	<meta name="keywords" content="freelance, consulting, web development, web design, bootstrap, html5, css3, mobile first, responsive, kansas city, KC" />
-	<meta name="author" content="Megan Batchelor" />
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+  <title>Its Meganificent - Portfolio</title>
+  <meta name="description" content="Consulting and web design in the heart of the plains Kansas City">
+  <meta name="keywords" content="freelance, consulting, web development, web design, bootstrap, html5, css3, mobile first, responsive, kansas city, KC">
+  <meta name="author" content="Megan Batchelor">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet" type="text/css">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="cssNew/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="cssNew/icomoon.css">
-	<!-- Simple Line Icons -->
-	<link rel="stylesheet" href="cssNew/simple-line-icons.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="cssNew/magnific-popup.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="cssNew/bootstrap.css">
-    <!-- Main Styles -->
-	<link rel="stylesheet" href="cssNew/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-	<!-- Modernizr JS -->
-	<script src="jsNew/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="jsNew/respond.min.js"></script>
-	<![endif]-->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48299598-1"></script>
-    <script>
-     window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-            gtag('config', 'UA-48299598-1');
-    </script>
-    <script>
-/**
-* Function that captures a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-var captureOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
-   });
-}
-</script>
+  <!-- Font Awesome Icon Kit-->
+  <script src="https://kit.fontawesome.com/e2a445329e.js" crossorigin="anonymous"></script>
+</head>
 
-	</head>
-	<body>
-	<header role="banner" id="fh5co-header">
-			<div class="container">
-				<!-- <div class="row"> -->
-			    <nav class="navbar navbar-default">
-		        <div class="navbar-header">
-		        	<!-- Mobile Toggle Menu Button -->
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		         <a class="navbar-brand" href="index.html">Batchelor C &amp; D</a> 
-		        </div>
-		        <div id="navbar" class="navbar-collapse collapse">
-		          <ul class="nav navbar-nav navbar-right">
-		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-		            <li><a href="#" data-nav-section="work"><span>Work</span></a></li>
-		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
-		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
-		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-		          </ul>
-		        </div>
-			    </nav>
-			  <!-- </div> -->
-		  </div>
-	</header>
+<body>
 
-	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_2.jpg); height:700px;" data-stellar-background-ratio="0.5">
-		<div class="gradient"></div>
-		<div class="container">
-			<div class="text-wrap">
-				<div class="text-inner">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<h1 class="to-animate">Stunning Design.</h1>
-							<h2 class="to-animate">Capitivating results. Provide the ultimate user experience.</a></h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slant"></div>
-	</section>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="fa-solid fa-bars mobile-nav-toggle d-xl-none"></i>
 
-	<section id="fh5co-intro">
-		<div class="container">
-			<div class="row row-bottom-padded-lg">
-				<div class="fh5co-block to-animate" style="background-image: url(images/img_7.jpg);">
-					<div class="overlay-darker"></div>
-					<div class="overlay"></div>
-					<div class="fh5co-text">
-						<i class="fh5co-intro-icon icon-bulb"></i>
-						<h2>Idea</h2>
-						<p>I provide layouts, designs, and content for your website, you provide the feedback.</p>
-						<p><a href="#fh5co-contact" class="btn btn-primary">Get Started</a></p>
-					</div>
-				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/img_8.jpg);">
-					<div class="overlay-darker"></div>
-					<div class="overlay"></div>
-					<div class="fh5co-text">
-						<i class="fh5co-intro-icon icon-wrench"></i>
-						<h2>Develop</h2>
-						<p>Already have a design? I can develop your dream website - in no time.</p>
-						<p><a href="#fh5co-contact" class="btn btn-primary">Contact Me</a></p>
-					</div>
-				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/img_10.jpg);">
-					<div class="overlay-darker"></div>
-					<div class="overlay"></div>
-					<div class="fh5co-text">
-						<i class="fh5co-intro-icon icon-rocket"></i>
-						<h2>Launch</h2>
-						<p>Full website assistance from the ground up! I can even provide support after the launch.</p>
-						<p><a href="#fh5co-work" class="btn btn-primary">Why Me?</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
 
-	<section id="fh5co-work" data-section="work">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate">Work</h2>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-                            <h3>Examples of work and projects I've done in the past. I specialize in creating custom, branded solutions. Don't have a brand? I can help you build it. For more information about these projects, please <a href="#fh5co-contact">contact me</a>.</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row row-bottom-padded-sm">
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="http://www.enrollkc.org" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/EnrollKC.png" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Enroll KC</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="http://www.kcpublicschools.org" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/kcps.png" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Kansas City Public Schools</h2>
-						<span>Content Manager + Webmaster</span>
-						</div>
-					</a>
-				</div>
-				
+      <div class="profile">
+        <img src="assets/img/megan.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Megan Batchelor</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/fiercekitti" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/megan-batchelor/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
 
-				<div class="clearfix visible-sm-block"></div>
-				
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="Kidstlc_Enroll.php" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/KidsTLC.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Supplier Enrollment Portal</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="fa-solid fa-house-chimney"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="fa-solid fa-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="fa-solid fa-file-lines"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="fa-solid fa-palette"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="fa-solid fa-laptop-code"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="fa-solid fa-envelope-open-text"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
 
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="WhiteLabel/Cadillac/index.html" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/whitelabel.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Client Portal</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
-				
-				
-				<div class="clearfix visible-sm-block"></div>
-				
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="calc.php" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/calc.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Detailed Rebate Calculator</h2>
-						<span>Development</span>
-						</div>
-					</a>
-				</div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Megan Batchelor</h1>
+      <p>I&#39m a <span class="typed" data-typed-items="Designer, Developer, Freelancer, Gamer, Coder"></span></p>
+    </div>
+  </section><!-- End Hero -->
 
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="calc_Simplified-draft.php" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/CalcSimple.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Simplified Rebate Calculator</h2>
-						<span>Development</span>
-						</div>
-					</a>
-				</div>
-				
-				
-				<div class="clearfix visible-sm-block"></div>
+  <main id="main">
 
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="KCS_Enroll.php" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/KCS.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Custom Enrollment Portal</h2>
-						<span>Development</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="Warehouse.html" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/warehousePro.JPG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Warehouse Pro Campaign</h2>
-						<span>Email Template</span>
-						</div>
-					</a>
-				</div>
-				
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
 
-				<div class="clearfix visible-sm-block"></div>
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Small details about me and what I&#39m passionate about.</p>
+        </div>
 
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="TEXPO%20Pre-show%20mailer.html" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/tradeshow.JPG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Tradeshow Drip Campaign</h2>
-						<span>Email Template</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="docs/Basic Order Form-US-new.pdf" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/orderForm.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Branded Order Form</h2>
-						<span>Graphic</span>
-						</div>
-					</a>
-				</div>
-				<div class="clearfix visible-sm-block"></div>
-                
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="docs/howToMarket-v2.pdf" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/howtomarket.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>How to Market Guide</h2>
-						<span>Graphic</span>
-						</div>
-					</a>
-				</div>
-                
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="WhiteLabel/CardFrontSF/#/" target="_blank" class="fh5co-project-item to-animate">
-						<img src="images/CardFrontOverview.PNG" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>eCommerce Website</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/megan.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Front-End Web Developer</h3>
+            <p class="fst-italic">
+              My main passion is web design and front-end web development. 
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Github:</strong> <span><a href="https://github.com/fiercekitti" target="_blank">https://github.com/fiercekitti</a></a></span></li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Website:</strong> <span><a href="http://www.itsmeganificent.com">www.itsmeganificent.com</a></span></li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <strong>City:</strong> <span>Lenexa, KS</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Fine Arts - Computer Animation</span></li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              I have an almost insatiable sense of curiosity when it comes to web design and development to the point where I`m driven to figure out how something is done or how it works. 
+              With my background and skills, I am a perfect fit for any development role. 
+              My development background means I will never design something that cannot be created with code. 
+              I excel at balancing multiple projects, as I am uncomfortable sitting idle.
+            </p>
+          </div>
+        </div>
 
-				<div class="clearfix visible-sm-block"></div>
-				
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="img/graphicDesign/emailmockup.jpg" class="fh5co-project-item image-popup to-animate">
-						<img src="images/emailmockup.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Hyla Email Mockup</h2>
-						<span>Graphic</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="img/graphicDesign/newEmail.jpg" class="fh5co-project-item image-popup to-animate">
-						<img src="images/newEmail.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Harley Davidson Rewards Email</h2>
-						<span>Graphic</span>
-						</div>
-					</a>
-				</div>
+      </div>
+    </section><!-- End About Section -->
 
-				<div class="clearfix visible-sm-block"></div>
-                
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="img/graphicDesign/test1.jpg" class="fh5co-project-item image-popup to-animate">
-						<img src="images/test1.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Harley Canada Email</h2>
-						<span>Graphic</span>
-						</div>
-					</a>
-				</div>
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Fun Facts</h2>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="fa-solid fa-briefcase"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1859" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> completed</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="fa-solid fa-code"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3343980" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Code</strong> written, debugged and commented</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="fa-solid fa-fire"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5009" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hair on Fire</strong> moments of panic</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="fa-solid fa-wand-sparkles"></i>
+              <span data-purecounter-start="0" data-purecounter-end="129" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Magic perfomed</strong></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>These are my top skills. As a developer, the learning never stops. As such, this will never be a complete list</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Indesign <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Illustrator <i class="val">40%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
             
-                <div class="clearfix visible-sm-block"></div>
-			</div>
-		</div>
-	</section>
+            <div class="progress">
+              <span class="skill">React Native <i class="val">20%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
-	<section id="fh5co-services" data-section="services" id="services">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-left">
-					<h2 class=" left-border to-animate">Services</h2>
-					<div class="row">
-						<div class="col-md-8 subtext to-animate">
-							<h3>I provide a variety of services, mostly surrounding web and web technologies.</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
-					<i class="icon to-animate-2 icon-anchor"></i>
-					<h3>Brand &amp; Strategy</h3>
-					<p>I can help you build your brand. From look and feel to how to gain followers on social media.</p>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
-					<i class="icon to-animate-2 icon-layers2"></i>
-					<h3>Web &amp; Interface</h3>
-					<p>Websites, graphics, email templates &amp; campaigns - the list could go on and on.</p>
-				</div>
+          </div>
 
-				<div class="clearfix visible-sm-block"></div>
-                <div class="col-md-6 col-sm-6 fh5co-service to-animate">
-					<i class="icon to-animate-2 icon-graph"></i>
-					<h3>Analytics</h3>
-					<p>I can help with setting up analytics on your website, and putting together reports &amp; tracking for web and/or social media.</p>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
-					<i class="icon to-animate-2 icon-video2"></i>
-					<h3>Photo &amp; Video Editing</h3>
-					<p>I can help with stockphotos, photography, photo or graphic manipulation, and video editing. </p>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	
-	<section id="fh5co-about" data-section="about" id="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading">
-					<h2 class="to-animate text-center">About</h2>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>My main passion is web design and front-end web development. I have an almost unsatiable sense of curiosity when it comes to web design and development to the point where I`m driven to figure out how something is done or how it works. I have a slight background in traditional programming (C++) that helps me analyze and create clean, reliable code. With my background and skills, I believe I am a perfect fit for any kind of team that is need of a developer. My technical background means I will never produce something that cannot be recreated with code and I understand the needs if a request is coming from an IT department. My creativity means I can work with other creative individuals and teams with ease. I like to have a lot of projects to work on as I feel like it utilizes my skills well and allows me to work through any issues that may come up without losing ground. I am currently based in Kansas City and am always open to taking on freelance projects.</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-person text-center to-animate">
-						<figure><img src="images/Megan.jpg" alt="Image"></figure>
-						<h3>Megan Batchelor</h3>
-						<span class="fh5co-position">Senior Digital Developer</span>
-						<p>Expert in HTML and CSS, Green Bay Packer fan and all around easy to get along with gamer chick</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-person text-center to-animate">
-						<figure><img src="images/Maya.JPG" alt="Image"></figure>
-						<h3>Maya the Cataclysmic</h3>
-						<span class="fh5co-position">Bengal Kitty</span>
-						<p>Fierce kitty, protector of the Batchelor realm, loud communicator</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-person text-center to-animate">
-						<figure><img src="images/ChrisWeb.png" alt="Image"></figure>
-						<h3>Chris Batchelor</h3>
-						<span class="fh5co-position">Cloud DevOps Engineer</span>
-						<p>Expert in fixing all the things, technical genius, master of the grill &amp; DevOps, gaming extraordinaire</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
-		<div class="fh5co-overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center to-animate">
-					<h2>Fun Facts</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="fh5co-counter to-animate">
-						<i class="fh5co-counter-icon icon-briefcase to-animate-2"></i>
-						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1259" data-speed="5000" data-refresh-interval="50">1259</span>
-						<span class="fh5co-counter-label">Finished projects</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="fh5co-counter to-animate">
-						<i class="fh5co-counter-icon icon-code to-animate-2"></i>
-						<span class="fh5co-counter-number js-counter" data-from="0" data-to="3343409" data-speed="5000" data-refresh-interval="50">3343409</span>
-						<span class="fh5co-counter-label">Line of codes</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="fh5co-counter to-animate">
-						<i class="fh5co-counter-icon icon-fire to-animate-2"></i>
-						<span class="fh5co-counter-number js-counter" data-from="0" data-to="5009" data-speed="5000" data-refresh-interval="50">5009</span>
-						<span class="fh5co-counter-label">Hair on fire moments</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="fh5co-counter to-animate">
-						<i class="fh5co-counter-icon icon-magic-wand to-animate-2"></i>
-						<span class="fh5co-counter-number js-counter" data-from="0" data-to="112" data-speed="5000" data-refresh-interval="50">112</span>
-						<span class="fh5co-counter-label">Magic performed</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
-	<section id="fh5co-contact" data-section="contact" id="contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate">Get In Touch</h2>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>The best way to contact me.</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row row-bottom-padded-md">
-				<div class="col-md-6 to-animate">
-					<h3>Contact Info</h3>
-					<ul class="fh5co-contact-info">
-						<li><i class="icon-envelope"></i>meganlennek@gmail.com</li>
-					</ul>
-				</div>
+            <div class="progress">
+              <span class="skill">PHP <i class="val">45%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
-				<div class="col-md-6 to-animate">
-					<h3>Contact Form</h3>
-					<iframe src="http://www.thebatchelordesign.com/form.php" width="500" height="405"></iframe>
-				</div>
+            <div class="progress">
+              <span class="skill">CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
-			</div>
-		</div>
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
-	</section>
-	
-	
-	<footer id="footer" role="contentinfo">
-		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
-		<br>
-        <div class="container">
-			<div class="">
-				<div class="col-md-12 text-center">
-					<p>&copy; Batchelor Consulting &amp; Design. All Rights Reserved.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul class="social social-circle">
-						<li><a href="https://www.facebook.com/fiercekitti"><i class="icon-facebook"></i></a></li>
-						<li><a href="http://www.linkedin.com/in/megan-batchelor"><i class="icon-linkedin"></i></a></li>
-						<li><a href="https://github.com/TheBatchelorFamily/Megans_Portfolio_Website"><i class="icon-github"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
+            <div class="progress">
+              <span class="skill">Python &amp; Docker <i class="val">5%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
-	
-	<!-- jQuery -->
-	<script src="jsNew/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="jsNew/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="jsNew/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="jsNew/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="jsNew/jquery.stellar.min.js"></script>
-	<!-- Counter -->
-	<script src="jsNew/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="jsNew/jquery.magnific-popup.min.js"></script>
-	<script src="jsNew/magnific-popup-options.js"></script>
+            <div class="progress">
+              <span class="skill">Git <i class="val">35%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
+            <div class="progress">
+              <span class="skill">AWS <i class="val">5%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
-	
+          </div>
+        </div>
 
-	<!-- Main JS -->
-	<script src="jsNew/main.js"></script>
+      </div>
+    </section><!-- End Skills Section -->
 
-	</body>
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>A brief overview of my professional experience.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Megan Batchelor</h4>
+              <p>
+                <em>
+                  I have an almost insatiable sense of curiosity when it comes to web design and development to the point where I`m driven to figure out how something is done or how it works. 
+                  With my background and skills, I am a perfect fit for any development role. 
+                  My development background means I will never design something that cannot be created with code. 
+                  I excel at balancing multiple projects, as I am uncomfortable sitting idle.
+                </em>
+              </p>
+              <ul>
+                <li>Lenexa, KS</li>
+                <li>meganlennek@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &mdash; Computer Animation</h4>
+              <h5>2001 &ndash; 2005</h5>
+              <p><em>Missouri State University, Springfield, MO</em></p>
+              <p>Fine arts studies with an emphasis in Computer Animation and a minor in Art History.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior Digital Developer</h4>
+              <h5>2017 &ndash; Present</h5>
+              <p><em>Kansas City Public School &mdash; Kansas City, MO </em></p>
+              <ul>
+                <li>Maintain, monitor, and manage internal and external websites &amp; apps</li>
+                <li>Train employees on digital media platforms for KCPS school buildings. This includes but is not limited to website, social media, digital messaging (SchoolMessenger, MailChimp, Let’s Talk, etc.), digital form creation</li>
+                <li>Compile monthly analytic reports in regards to put not limited to: website traffic and trends; social media engagement and following; and local and national media coverage of district</li>
+                <li>Create branding and image concepts for website and media technology outlets</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Web Designer</h4>
+              <h5>2014 &ndash; 2016</h5>
+              <p><em>Store Financial &mdash; Overland Park, KS</em></p>
+              <ul>
+                <li>Work with Director of Marketing to prioritize, design and customize websites and materials</li>
+                <li>Manage, maintain and improve the company website</li>
+                <li>Design customized supplier enrollment or white-label websites for clients</li>
+                <li>Design promotional materials such as e-mail blasts, landing pages, physical & digital card designs, and POS collateral</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>IT/Web Develper Intern</h4>
+              <h5>2012 &ndash; 2014</h5>
+              <p><em>Newz Group &mdash; Columbia, MO</em></p>
+              <ul>
+                <li>Re-designed the company&#39s website and public notice webpages for 9 different states</li>
+                <li>Continually update the company&#39s website and assist with SEO</li>
+                <li>Assisted with re-design of two of the company&#39s services webpages and customer portals</li>
+                <li>Designed new email template for company&#39s email service</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>These are examples of projects I have worked on and completed. This section will grow as more projects and ideas come to fruition.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-web">Web</li>
+              <!--li data-filter=".filter-design">Design</li>
+              <li data-filter=".filter-dev">Development</li-->
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/kcps.png" class="img-fluid" alt="Kansas City Public Schools Website screenshot">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/kcps.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="fa-solid fa-plus"></i></a>
+                <a href="http://www.kcpublicschools.org" title="Kansas City Public Schools Website" target="_blank"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/EnrollKC.png" class="img-fluid" alt="Enroll KC website screenshot">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/EnrollKC.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="fa-solid fa-plus"></i></a>
+                <a href="http://www.enrollKC.org" title="Enroll KC website screenshot"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <<!--div class="col-lg-4 col-md-6 portfolio-item filter-dev">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/calc.png" class="img-fluid" alt="Screenshot of Supplier Calculator Development work">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/calc.PNG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dev 1"><i class="fa-solid fa-plus"></i></a>
+                <a href="calc.php" title="More Details About Supplier Calculator"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="fa-solid fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="fa-solid fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="fa-solid fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="fa-solid fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="fa-solid fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="fa-solid fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div-->
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>I provide a variety of services, mostly surrounding web and graphic technologies.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="fa-solid fa-anchor"></i></div>
+            <h4 class="title"><a href="">Brand &amp; Strategy</a></h4>
+            <p class="description">I can help you build your brand. From look and feel to how to gain followers on social media.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h4 class="title"><a href="">Web & Interface</a></h4>
+            <p class="description">Websites, graphics, email templates & campaigns - the list could go on and on.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4 class="title"><a href="">Analytics</a></h4>
+            <p class="description">I can help with setting up analytics on your website, and putting together reports & tracking for web and/or social media.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="fa-solid fa-video"></i></div>
+            <h4 class="title"><a href="">Photo & Video Editing</a></h4>
+            <p class="description">I can help with stockphotos, photography, photo or graphic manipulation, and video editing.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="fa-solid fa-window-restore"></i></div>
+            <h4 class="title"><a href="">Web Consultation</a></h4>
+            <p class="description">I can help with refreshing &amp; modernizing your website as well as checking for WCAG compliance.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="fa-solid fa-images"></i></div>
+            <h4 class="title"><a href="">Graphics & Document Design</a></h4>
+            <p class="description">I can make your flyers, resumes, one-pagers and more look more inviting and pleasing to the eye.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>The best way to contact me is via email. I have included my email address or if you prefer a form below. </p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h4>Location:</h4>
+                <p>Lenenxa, KS</p>
+              </div>
+
+              <div class="email">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <h4>Email:</h4>
+                <p>meganlennek@gmail.com</p>
+              </div>
+              <iframe src="https://maps.google.com/maps?q=Lenexa,%20KS&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/form.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Batchelor Consulting &amp; Design. All Rights Reserved.</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-angle-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
-
