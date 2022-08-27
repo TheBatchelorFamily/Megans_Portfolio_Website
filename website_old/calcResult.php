@@ -228,6 +228,16 @@
 			$netTotal = $netRate * $g;
 			return $netTotal;
 		}
+		//Function to sanitize form data
+		function nullnegcheck(a){
+			if(a == null || a < 0) {
+				a = 0;
+				return a;
+			}
+			else{
+				return a;
+			}
+		}
 	if (isset($_POST['spend']) && isset($_POST['term1']) && isset($_POST['term2']) && isset($_POST['term3']) && isset($_POST['term4']) 
     && isset($_POST['term5']) && isset($_POST['check']) && isset($_POST['ach']) && isset($_POST['wire']) && isset($_POST['pCard'])) {
     
@@ -237,17 +247,17 @@
 		
 		//Get form info into variables
 		$spend          = str_replace(",", "",$_POST['spend']);
-		$term1          = $_POST['term1'];
-		$term2          = $_POST['term2'];
-		$term3          = $_POST['term3'];
-		$term4          = $_POST['term4'];
-		$term5          = $_POST['term5'];
-		$check          = $_POST['check'];
-		$ach            = $_POST['ach'];
-		$wire 		    = $_POST['wire'];
-		$pCard          = $_POST['pCard'];
-		$checksPerMonth = str_replace(",", "",$_POST['checksPerMonth']); 
-		$achPerMonth    = str_replace(",", "",$_POST['achPerMonth']);
+		$term1          = nullnegcheck($_POST['term1']);
+		$term2          = nullnegcheck($_POST['term2']);
+		$term3          = nullnegcheck($_POST['term3']);
+		$term4          = nullnegcheck($_POST['term4']);
+		$term5          = nullnegcheck($_POST['term5']);
+		$check          = nullnegcheck($_POST['check']);
+		$ach            = nullnegcheck($_POST['ach']);
+		$wire 		    = nullnegcheck($_POST['wire']);
+		$pCard          = nullnegcheck($_POST['pCard']);
+		$checksPerMonth = nullnegcheck(str_replace(",", "",$_POST['checksPerMonth'])); 
+		$achPerMonth    = nullnegcheck(str_replace(",", "",$_POST['achPerMonth']));
 		
 		$termTotal = ($term1 + $term2 + $term3 + $term4 + $term5);
 		$paymentTotal = ($check + $ach + $wire + $pCard);
