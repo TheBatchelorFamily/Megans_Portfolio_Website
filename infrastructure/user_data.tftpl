@@ -1,6 +1,6 @@
 #!/bin/bash
 export CONTAINER INSTANCE_ID ALLOC_ID AWS_DEFAULT_REGION
-CONTAINER='fiercekitti/portfolio_website:${tag}'
+CONTAINER="fiercekitti/portfolio_website:${tag}"
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 # shellcheck disable=SC2154
 ALLOC_ID="${eipID}"
