@@ -12,9 +12,9 @@ on:
 
 jobs:
   Terraform_Deploy:
-    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@1.1.0
+    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@1.1.1
     with:
-      checkoutBranch: Terraform_Latest_Tag
+      checkoutBranch: main
       deployLatestTag: true
       workingDirectory: ./infrastructure/
     secrets: inherit
