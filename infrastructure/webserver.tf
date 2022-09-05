@@ -47,7 +47,7 @@ module "aws_auto_scale" {
   keyname       = var.keyname
   publicIP      = true
   securityGroup = [module.aws_webserver_network.aws_security_group_id]
-  source        = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=1.0.0"
+  source        = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=update_default_version"
   sshPub        = file(var.sshPub)
   subnet        = var.subnet
   tags          = var.tags
