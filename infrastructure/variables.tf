@@ -1,6 +1,9 @@
 variable dnsName {
     default = "itsmeganificent.com"
 }
+variable imageTag {
+    default = "2.0.2"
+}
 variable itype {
     default = "t2.micro"
 }
