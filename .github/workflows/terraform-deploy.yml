@@ -3,7 +3,7 @@ name: Terraform Deploy
 
 on:
   push:
-    branches: [Terraform_Latest_Tag]
+    branches: [main]
     paths:
       - 'infrastructure/*'
       - '!infrastructure/*.md'
@@ -12,7 +12,7 @@ on:
 
 jobs:
   Terraform_Deploy:
-    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@terraform_latest_tag
+    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@1.1.0
     with:
       checkoutBranch: Terraform_Latest_Tag
       deployLatestTag: true
