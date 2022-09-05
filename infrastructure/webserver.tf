@@ -55,7 +55,8 @@ module "aws_auto_scale" {
     "./user_data.tftpl",
     {
       eipID:module.aws_webserver_network.aws_eip_alloID,
-      region:var.region
+      region:var.region,
+      tag:var.imageTag
     }
   ))
 }
