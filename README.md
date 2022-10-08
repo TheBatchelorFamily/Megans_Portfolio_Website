@@ -16,7 +16,7 @@ More specific information can be found by viewing the supplemental [README](./in
 A workflow has been created via GitHub Actions. This workflow is triggered when a new release is published in this repository. When the workflow runs, the released tag is applied to the image and it is pushed up to the docker repository. The latest tag in that repository is also updated.
 
 ## Future Improvements
-The deployment process currently does not account for forcing the existing EC2 instance to pull the latest image. The user-data supplied to that instance simply pulls the latest tag on the time of its creation. We can manually force this by terminating the instance and a new EC2 instance will launch and pull the current image automatically via AWS auto scaling. In the future this should be automated. One way would be to simply terminate the instance via the command line with a GitHub action whenever a new image is pushed. Another might be to create a Lambda to perform this task that is triggered when a new image is pushed.
+The current architecture does not include SSL for HTTPS. Adding CloudFront to the stack should be a fairly cheap way to accomplish this. [Issue #22](https://github.com/TheBatchelorFamily/Megans_Portfolio_Website/issues/22)
 
 ## Maintainers
 * [Megan Batchelor](https://github.com/fiercekitti)(Front-End Developer)
