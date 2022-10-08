@@ -6,6 +6,9 @@ This is a fairly simple [Terraform](https://www.terraform.io/) setup that utiliz
 This allows some of the complexity to be abstracted, and also provides for a more standardized modular approach to deployment.
 With the added modularity, it will be easier to safely deploy another containerized app at some point in the future, and have both benefit from various enhancements and security updates.
 
+## Architecture Diagram
+![Diagram](./images/Website_Architecture.png)
+
 ## State file
 The state file is now stored in an s3 bucket so that it is easy to clone the repository and deploy locally (with the appropriate credentials) from any workstation, but the primary intention is to deploy via the [GitHub Action](../.github/workflows/terraform-deploy.yml) within this repository.
 
