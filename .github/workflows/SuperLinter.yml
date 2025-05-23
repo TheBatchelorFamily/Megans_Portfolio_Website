@@ -45,7 +45,7 @@ jobs:
           fetch-depth: 0
 
       - name: install stylelint for twitter bootstrap
-        run: npm install stylelint-config-twbs-bootstrap --save-dev
+        run: npm install stylelint-config-twbs-bootstrap --save-dev --legacy-peer-deps
 
       ################################
       # Run Linter against code base #
