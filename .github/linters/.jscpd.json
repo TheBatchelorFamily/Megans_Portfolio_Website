@@ -6,7 +6,7 @@
   "ignore": [
     "**/__snapshots__/**",
     "website/index.html",
-    "node_modules/**"
+    "**/node_modules/**"
   ],
   "min-lines": 10,
   "absolute": true
