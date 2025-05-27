@@ -65,7 +65,6 @@ extends:
   - plugin:unicorn/recommended
 
 overrides:
-
   # JSON files
   - files:
       - "*.json"
