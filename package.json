@@ -6,6 +6,6 @@
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^5.0.1",
     "stylelint-config-recess-order": "^5.0.0",
-    "stylelint-config-twbs-bootstrap": "^5.1.0"
+    "stylelint-config-twbs-bootstrap": "^5.0.0"
   }
 }
