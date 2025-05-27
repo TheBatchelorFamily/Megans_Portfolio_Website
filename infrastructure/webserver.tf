@@ -1,19 +1,5 @@
-resource "aws_s3_bucket" "terraform_state" {
-  #ts:skip=AC_AWS_0214 Enabling S3 versioning
-  bucket = "terraform-itsmeganificent"
-}
-
-resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" {
-  bucket = aws_s3_bucket.terraform_state.bucket
-
-  rule {
-    apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
-    }
-  }
-}
-
 module "aws_webserver_network" {
+  #checkov:skip=CKV_TF_2: point to branch for testing
   source       = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_webserver_network?ref=cloudfront"
   region       = var.region
   secgroupname = "itsmeganificent-Group"
@@ -22,6 +8,7 @@ module "aws_webserver_network" {
 }
 
 module "aws_auto_scale" {
+  #checkov:skip=CKV_TF_2: point to branch for testing
   keyname       = "itsmeganificent-key"
   publicIP      = true
   securityGroup = [module.aws_webserver_network.aws_security_group_id]
