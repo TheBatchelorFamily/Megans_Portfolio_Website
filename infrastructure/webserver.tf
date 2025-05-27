@@ -28,7 +28,7 @@ module "aws_auto_scale" {
   source        = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=cloudfront"
   sshPub        = file("./webserver.pub")
   tags          = var.tags
-  userData      = base64encode(templatefile(
+  userData = base64encode(templatefile(
     "./user_data.tftpl",
     {
       eipID:module.aws_webserver_network.aws_eip_alloID,
