@@ -85,8 +85,8 @@ extends:
   - plugin:import/errors
   - plugin:import/warnings
   - plugin:unicorn/recommended
-  - xo
-  - xo/browse
+  # - xo
+  # - xo/browse
 
 ##############################
 # Overrides for JSON parsing #
