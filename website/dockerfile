@@ -1,3 +1,11 @@
 FROM php:apache
 RUN echo "ServerName 127.0.0.1" >> /etc/apache2/apache2.conf
+
+# Create a non-root user and switch to it
+RUN useradd -m appuser
+USER appuser
+
 COPY . /var/www/html/
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost/ || exit 1

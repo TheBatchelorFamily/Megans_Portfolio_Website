@@ -5,12 +5,19 @@ on:
   release:
     types: [published]
 
+# Remove top-level permissions to avoid write-all
+permissions: {}
+
 jobs:
   Container_Registration:
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     uses: TheBatchelorFamily/SharedGHA/.github/workflows/container_registration.yml@1.0.0
     with:
-      containerDirectory: 'website/'
-      containerName: 'portfolio_website'
-      containerRepo: 'fiercekitti'
+      containerDirectory: "website/"
+      containerName: "portfolio_website"
+      containerRepo: "fiercekitti"
       containerVersion: ${{ github.ref_name }}
     secrets: inherit

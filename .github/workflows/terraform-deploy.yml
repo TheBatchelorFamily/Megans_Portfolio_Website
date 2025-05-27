@@ -5,13 +5,19 @@ on:
   push:
     branches: [main]
     paths:
-      - 'infrastructure/*'
-      - '!infrastructure/*.md'
-      - '.github/workflows/terraform-deploy.yml'
+      - "infrastructure/*"
+      - "!infrastructure/*.md"
+      - ".github/workflows/terraform-deploy.yml"
   workflow_dispatch:
+
+# Remove top-level permissions to avoid write-all
+permissions: {}
 
 jobs:
   Terraform_Deploy:
+    permissions:
+      contents: read
+      id-token: write
     uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@1.1.1
     with:
       checkoutBranch: main
