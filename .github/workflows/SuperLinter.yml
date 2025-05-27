@@ -50,6 +50,11 @@ jobs:
         with:
           # Full git history is needed to get a list of changed files
           fetch-depth: 0
+      
+      - name: Checkout PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin ${{ github.head_ref }} && git checkout ${{ github.head_ref }}
 
       ################################
       # Run Linter against code base #
