@@ -1,4 +1,4 @@
-terraform{
+terraform {
   backend "s3" {
     bucket = "terraform-itsmeganificent"
     key    = "terraform.tfstate"

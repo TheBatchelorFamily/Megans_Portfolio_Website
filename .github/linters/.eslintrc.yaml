@@ -23,7 +23,7 @@ globals:
 ###############
 # Parser vars #
 ###############
-parser: '@typescript-eslint/parser'
+parser: "@typescript-eslint/parser"
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
@@ -32,21 +32,21 @@ parserOptions:
 # Plugins #
 ###########
 plugins:
-  - '@typescript-eslint'
+  - "@typescript-eslint"
 
 #########
 # Rules #
 #########
 rules:
-  arrow-body-style: 'off'
-  capitalized-comments: 'off'
+  arrow-body-style: "off"
+  capitalized-comments: "off"
   comma-dangle:
     - error
     - never
   indent:
     - error
     - 2
-    - MemberExpression: 'off'
+    - MemberExpression: "off"
     - SwitchCase: 1
   max-params:
     - warn
@@ -58,8 +58,8 @@ rules:
     - error
     - properties: false
   no-console: error
-  no-mixed-spaces-and-tabs: 'off'
-  no-negated-condition: 'off'
+  no-mixed-spaces-and-tabs: "off"
+  no-negated-condition: "off"
   object-curly-spacing:
     - error
     - always
@@ -69,17 +69,17 @@ rules:
   semi:
     - error
     - never
-  unicorn/explicit-length-check: 'off'
-  unicorn/no-array-callback-reference: 'off'
-  unicorn/no-array-method-this-argument: 'off'
-  unicorn/no-null: 'off'
+  unicorn/explicit-length-check: "off"
+  unicorn/no-array-callback-reference: "off"
+  unicorn/no-array-method-this-argument: "off"
+  unicorn/no-null: "off"
   unicorn/no-unused-properties: error
-  unicorn/prefer-array-flat: 'off'
-  unicorn/prefer-dom-node-dataset: 'off'
-  unicorn/prefer-module: 'off'
-  unicorn/prefer-query-selector: 'off'
-  unicorn/prefer-spread: 'off'
-  unicorn/prevent-abbreviations: 'off'
+  unicorn/prefer-array-flat: "off"
+  unicorn/prefer-dom-node-dataset: "off"
+  unicorn/prefer-module: "off"
+  unicorn/prefer-query-selector: "off"
+  unicorn/prefer-spread: "off"
+  unicorn/prevent-abbreviations: "off"
 
 extends:
   - plugin:import/errors
@@ -92,7 +92,6 @@ extends:
 # Overrides for JSON parsing #
 ##############################
 overrides:
-
   # JSON files
   - files:
       - "*.json"

@@ -31,9 +31,9 @@ module "aws_auto_scale" {
   userData = base64encode(templatefile(
     "./user_data.tftpl",
     {
-      eipID:module.aws_webserver_network.aws_eip_alloID,
-      region:var.region,
-      tag:"2.0.2"
+      eipID : module.aws_webserver_network.aws_eip_alloID,
+      region : var.region,
+      tag : "2.0.2"
     }
   ))
 }
