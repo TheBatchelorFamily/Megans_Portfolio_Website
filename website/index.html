@@ -1,447 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Its Meganificent - Portfolio</title>
+    <meta
+      name="description"
+      content="Consulting and web design in the heart of the plains Kansas City"
+    />
+    <meta
+      name="keywords"
+      content="freelance, consulting, web development, web design, bootstrap, html5, css3, mobile first, responsive, kansas city, KC"
+    />
+    <meta name="author" content="Megan Batchelor" />
 
-  <title>Its Meganificent - Portfolio</title>
-  <meta name="description" content="Consulting and web design in the heart of the plains Kansas City">
-  <meta name="keywords" content="freelance, consulting, web development, web design, bootstrap, html5, css3, mobile first, responsive, kansas city, KC">
-  <meta name="author" content="Megan Batchelor">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Font Awesome Icon Kit-->
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+  </head>
 
-  <!-- Font Awesome Icon Kit-->
-  <link href="assets/css/fontawesome.min.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="fa-solid fa-bars mobile-nav-toggle d-xl-none"></i>
 
-<body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="fa-solid fa-bars mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/megan.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Megan Batchelor</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/fiercekitti" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/megan-batchelor/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile">
+          <img
+            src="assets/img/megan.jpg"
+            alt=""
+            class="img-fluid rounded-circle"
+          />
+          <h1 class="text-light"><a href="index.html">Megan Batchelor</a></h1>
+          <div class="social-links mt-3 text-center">
+            <a
+              href="https://github.com/fiercekitti"
+              target="_blank"
+              class="github"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/megan-batchelor/"
+              target="_blank"
+              class="linkedin"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
         </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="#hero" class="nav-link scrollto active"
+                ><i class="fa-solid fa-house-chimney"></i> <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link scrollto"
+                ><i class="fa-solid fa-user"></i> <span>About</span></a
+              >
+            </li>
+            <li>
+              <a href="#resume" class="nav-link scrollto"
+                ><i class="fa-solid fa-file-lines"></i> <span>Resume</span></a
+              >
+            </li>
+            <li>
+              <a href="#portfolio" class="nav-link scrollto"
+                ><i class="fa-solid fa-palette"></i> <span>Portfolio</span></a
+              >
+            </li>
+            <li>
+              <a href="#services" class="nav-link scrollto"
+                ><i class="fa-solid fa-laptop-code"></i>
+                <span>Services</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link scrollto"
+                ><i class="fa-solid fa-envelope-open-text"></i>
+                <span>Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
       </div>
+    </header>
+    <!-- End Header -->
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="fa-solid fa-house-chimney"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="fa-solid fa-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="fa-solid fa-file-lines"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="fa-solid fa-palette"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="fa-solid fa-laptop-code"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="fa-solid fa-envelope-open-text"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Megan Batchelor</h1>
-      <p>I&#39;m a <span class="typed" data-typed-items="Designer, Developer, Freelancer, Gamer, Coder"></span></p>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Small details about me and what I&#39;m passionate about.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/megan.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Front-End Web Developer</h3>
-            <p class="fst-italic">
-              My main passion is web design and front-end web development. 
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Github:</strong> <span><a href="https://github.com/fiercekitti" target="_blank">https://github.com/fiercekitti</a></span></li>
-                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Website:</strong> <span><a href="http://www.itsmeganificent.com">www.itsmeganificent.com</a></span></li>
-                  <li><i class="fa-solid fa-chevron-right"></i> <strong>City:</strong> <span>Shawnee, KS</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Fine Arts - Computer Animation</span></li>
-                  <li><i class="fa-solid fa-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-            <p>
-              I have an insatiable curiosity when it comes to web development.
-              I enjoy keeping tabs on the latest trends and obsessively digging in to figure out how it works.
-              On the design side, my development background keeps all of my designs grounded in the capabilities of the code.
-              I'm uncomfortable sitting idle, so I excel at balancing multiple projects.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Fun Facts</h2>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="fa-solid fa-briefcase"></i>
-              <span data-purecounter-start="0" data-purecounter-end="2859" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> completed</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="fa-solid fa-code"></i>
-              <span data-purecounter-start="0" data-purecounter-end="3453980" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Lines of Code</strong> written, debugged and commented</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="fa-solid fa-fire"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5025" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hair on Fire</strong> moments of panic</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="fa-solid fa-wand-sparkles"></i>
-              <span data-purecounter-start="0" data-purecounter-end="259" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Miracles perfomed</strong></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <!--
-    // jscpd:ignore-start
-    -->    
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>These are my top skills. Continuous improvement is a development credo, so this list will be perpetually out of date.</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Adobe Creative Cloud <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Hubspot <i class="val">40%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">React Native <i class="val">20%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Theme Builders - Divi, Elementor <i class="val">45%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">45%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">ADA Compliance <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python &amp; Docker <i class="val">5%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Git <i class="val">35%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">AWS <i class="val">5%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Wordpress <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+    <!-- ======= Hero Section ======= -->
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Megan Batchelor</h1>
+        <p>
+          I&#39;m a
+          <span
+            class="typed"
+            data-typed-items="Designer, Developer, Freelancer, Gamer, Coder"
+          ></span>
+        </p>
       </div>
     </section>
-    <!--
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About</h2>
+            <p>Small details about me and what I&#39;m passionate about.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="assets/img/megan.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Front-End Web Developer</h3>
+              <p class="fst-italic">
+                My main passion is web design and front-end web development.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <strong>Github:</strong>
+                      <span
+                        ><a
+                          href="https://github.com/fiercekitti"
+                          target="_blank"
+                          >https://github.com/fiercekitti</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <strong>Website:</strong>
+                      <span
+                        ><a href="http://www.itsmeganificent.com"
+                          >www.itsmeganificent.com</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <strong>City:</strong> <span>Shawnee, KS</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <strong>Degree:</strong>
+                      <span>Bachelor of Fine Arts - Computer Animation</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <strong>Freelance:</strong> <span>Available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                I have an insatiable curiosity when it comes to web development.
+                I enjoy keeping tabs on the latest trends and obsessively
+                digging in to figure out how it works. On the design side, my
+                development background keeps all of my designs grounded in the
+                capabilities of the code. I'm uncomfortable sitting idle, so I
+                excel at balancing multiple projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Facts Section ======= -->
+      <section id="facts" class="facts">
+        <div class="container">
+          <div class="section-title">
+            <h2>Fun Facts</h2>
+          </div>
+
+          <div class="row no-gutters">
+            <div
+              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="count-box">
+                <i class="fa-solid fa-briefcase"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="2859"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p><strong>Projects</strong> completed</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
+              data-aos="fade-up"
+            >
+              <div class="count-box">
+                <i class="fa-solid fa-code"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="3453980"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Lines of Code</strong> written, debugged and commented
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="count-box">
+                <i class="fa-solid fa-fire"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="5025"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p><strong>Hair on Fire</strong> moments of panic</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="count-box">
+                <i class="fa-solid fa-wand-sparkles"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="259"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p><strong>Miracles perfomed</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Facts Section -->
+
+      <!-- ======= Skills Section ======= -->
+      <!--
+    // jscpd:ignore-start
+    -->
+      <section id="skills" class="skills section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>
+              These are my top skills. Continuous improvement is a development
+              credo, so this list will be perpetually out of date.
+            </p>
+          </div>
+
+          <div class="row skills-content">
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="progress">
+                <span class="skill">HTML <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">CSS <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  >Adobe Creative Cloud <i class="val">85%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Hubspot <i class="val">40%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="40"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">React Native <i class="val">20%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="20"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  >Theme Builders - Divi, Elementor <i class="val">45%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="45"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="progress">
+                <span class="skill">PHP <i class="val">45%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="45"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">CMS <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">ADA Compliance <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  >Python &amp; Docker <i class="val">5%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="5"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Git <i class="val">35%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="35"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">AWS <i class="val">5%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="5"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Wordpress <i class="val">65%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="65"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--
     // jscpd:ignore-end
     -->
-    <!-- End Skills Section -->
+      <!-- End Skills Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container">
+          <div class="section-title">
+            <h2>Resume</h2>
+            <p>A brief overview of my professional experience.</p>
+          </div>
 
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>A brief overview of my professional experience.</p>
-        </div>
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>Megan Batchelor</h4>
+                <p>
+                  <em>
+                    I am an exceptional multi-tasker with a diverse web-design
+                    and development background. I've spent years working in both
+                    education and corporate environments. I'm currently working
+                    to augment my existing skillset with full stack web
+                    development.
+                  </em>
+                </p>
+                <ul>
+                  <li>Shawnee, KS</li>
+                  <li>meganlennek@gmail.com</li>
+                </ul>
+              </div>
 
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Megan Batchelor</h4>
-              <p>
-                <em>
-                  I am an exceptional multi-tasker with a diverse web-design and development background.
-                  I've spent years working in both education and corporate environments.
-                  I'm currently working to augment my existing skillset with full stack web development.
-                </em>
-              </p>
-              <ul>
-                <li>Shawnee, KS</li>
-                <li>meganlennek@gmail.com</li>
-              </ul>
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Fine Arts &mdash; Computer Animation</h4>
+                <h5>2001 &ndash; 2005</h5>
+                <p><em>Missouri State University, Springfield, MO</em></p>
+                <p>
+                  Fine arts studies with an emphasis in Computer Animation and a
+                  minor in Art History.
+                </p>
+              </div>
             </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &mdash; Computer Animation</h4>
-              <h5>2001 &ndash; 2005</h5>
-              <p><em>Missouri State University, Springfield, MO</em></p>
-              <p>Fine arts studies with an emphasis in Computer Animation and a minor in Art History.</p>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Web Manager</h4>
+                <h5>2022 &ndash; September 2025</h5>
+                <p><em>CBTS &mdash; Cincinnati, OH </em> Remote</p>
+                <ul>
+                  <li>
+                    Maintain, monitor, and manage internal and external facing
+                    websites
+                  </li>
+                  <li>
+                    Be the technical lead to co-workers and/or key vendors and
+                    agencies as it pertains to websites, SEO, increasing
+                    traffic, etc.
+                  </li>
+                  <li>
+                    Maintain ADA/AODA compliance for all public and internally
+                    facing websites
+                  </li>
+                  <li>
+                    Create branding and image concepts for website, digital
+                    media, print media, etc.
+                  </li>
+                  <li>
+                    Compile monthly analytics reports in regards to: website
+                    visits, trending products and campaigns, and social media
+                    engagement.
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Senior Digital Developer</h4>
+                <h5>2017 &ndash; 2022</h5>
+                <p>
+                  <em>Kansas City Public School &mdash; Kansas City, MO </em>
+                </p>
+                <ul>
+                  <li>
+                    Maintain, monitor, and manage internal and external websites
+                    &amp; apps
+                  </li>
+                  <li>
+                    Train employees on digital media platforms for KCPS school
+                    buildings. This includes but is not limited to website,
+                    social media, digital messaging (SchoolMessenger, MailChimp,
+                    Let’s Talk, etc.), digital form creation
+                  </li>
+                  <li>
+                    Compile monthly analytic reports in regards to put not
+                    limited to: website traffic and trends; social media
+                    engagement and following; and local and national media
+                    coverage of district
+                  </li>
+                  <li>
+                    Create branding and image concepts for website and media
+                    technology outlets
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Web Designer</h4>
+                <h5>2014 &ndash; 2016</h5>
+                <p><em>Store Financial &mdash; Overland Park, KS</em></p>
+                <ul>
+                  <li>
+                    Work with Director of Marketing to prioritize, design and
+                    customize websites and materials
+                  </li>
+                  <li>Manage, maintain and improve the company website</li>
+                  <li>
+                    Design customized supplier enrollment or white-label
+                    websites for clients
+                  </li>
+                  <li>
+                    Design promotional materials such as e-mail blasts, landing
+                    pages, physical &amp; digital card designs, and POS
+                    collateral
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>IT/Web Develper Intern</h4>
+                <h5>2012 &ndash; 2014</h5>
+                <p><em>Newz Group &mdash; Columbia, MO</em></p>
+                <ul>
+                  <li>
+                    Re-designed the company&#39;s website and public notice
+                    webpages for 9 different states
+                  </li>
+                  <li>
+                    Continually update the company&#39;s website and assist with
+                    SEO
+                  </li>
+                  <li>
+                    Assisted with re-design of two of the company&#39;s services
+                    webpages and customer portals
+                  </li>
+                  <li>
+                    Designed new email template for company&#39;s email service
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Web Manager</h4>
-              <h5>2022 &ndash; September 2025</h5>
-              <p><em>CBTS &mdash; Cincinnati, OH </em> Remote</p>
-              <ul>
-                <li>Maintain, monitor, and manage internal and external facing websites</li>
-                <li>Be the technical lead to co-workers and/or key vendors and agencies as it pertains to websites, SEO, increasing traffic, etc.</li>
-                <li>Maintain ADA/AODA compliance for all public and internally facing websites</li>
-                <li>Create branding and image concepts for website, digital media, print media, etc.</li>
-                <li>Compile monthly analytics reports in regards to: website visits, trending products and campaigns, and social media engagement.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Senior Digital Developer</h4>
-              <h5>2017 &ndash; 2022</h5>
-              <p><em>Kansas City Public School &mdash; Kansas City, MO </em></p>
-              <ul>
-                <li>Maintain, monitor, and manage internal and external websites &amp; apps</li>
-                <li>Train employees on digital media platforms for KCPS school buildings. This includes but is not limited to website, social media, digital messaging (SchoolMessenger, MailChimp, Let’s Talk, etc.), digital form creation</li>
-                <li>Compile monthly analytic reports in regards to put not limited to: website traffic and trends; social media engagement and following; and local and national media coverage of district</li>
-                <li>Create branding and image concepts for website and media technology outlets</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Web Designer</h4>
-              <h5>2014 &ndash; 2016</h5>
-              <p><em>Store Financial &mdash; Overland Park, KS</em></p>
-              <ul>
-                <li>Work with Director of Marketing to prioritize, design and customize websites and materials</li>
-                <li>Manage, maintain and improve the company website</li>
-                <li>Design customized supplier enrollment or white-label websites for clients</li>
-                <li>Design promotional materials such as e-mail blasts, landing pages, physical &amp; digital card designs, and POS collateral</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>IT/Web Develper Intern</h4>
-              <h5>2012 &ndash; 2014</h5>
-              <p><em>Newz Group &mdash; Columbia, MO</em></p>
-              <ul>
-                <li>Re-designed the company&#39;s website and public notice webpages for 9 different states</li>
-                <li>Continually update the company&#39;s website and assist with SEO</li>
-                <li>Assisted with re-design of two of the company&#39;s services webpages and customer portals</li>
-                <li>Designed new email template for company&#39;s email service</li>
-              </ul>
-            </div>
+        </div>
+      </section>
+      <!-- End Resume Section -->
+
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Portfolio</h2>
+            <p>
+              These are examples of projects I have worked on and completed.
+              This section will grow as more projects and ideas come to
+              fruition.
+            </p>
           </div>
-        </div>
 
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>These are examples of projects I have worked on and completed. This section will grow as more projects and ideas come to fruition.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-web">Web</li>
-              <!--li data-filter=".filter-design">Design</li>
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-web">Web</li>
+                <!--li data-filter=".filter-design">Design</li>
               <li data-filter=".filter-dev">Development</li-->
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-3 col-md-3 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/cbts_com.png" class="img-fluid" alt="CBTS Website screenshot">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/kcps.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="fa-solid fa-plus"></i></a>
-                <a href="http://www.cbts.com" title="CBTS Website" target="_blank"><i class="fa-solid fa-link"></i></a>
-              </div>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-3 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/onx_com.png" class="img-fluid" alt="OnX Website screenshot">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/onx_com.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="fa-solid fa-plus"></i></a>
-                <a href="http://www.onx.com" title="OnX Website" target="_blank"><i class="fa-solid fa-link"></i></a>
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="col-lg-3 col-md-3 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/cbts_com.png"
+                  class="img-fluid"
+                  alt="CBTS Website screenshot"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/kcps.png"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 1"
+                    ><i class="fa-solid fa-plus"></i
+                  ></a>
+                  <a
+                    href="http://www.cbts.com"
+                    title="CBTS Website"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-3 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/kcps.png" class="img-fluid" alt="Kansas City Public Schools Website screenshot">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/kcps.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="fa-solid fa-plus"></i></a>
-                <a href="http://www.kcpublicschools.org" title="Kansas City Public Schools Website" target="_blank"><i class="fa-solid fa-link"></i></a>
+            <div class="col-lg-3 col-md-3 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/onx_com.png"
+                  class="img-fluid"
+                  alt="OnX Website screenshot"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/onx_com.png"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 2"
+                    ><i class="fa-solid fa-plus"></i
+                  ></a>
+                  <a
+                    href="http://www.onx.com"
+                    title="OnX Website"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-3 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/EnrollKC.png" class="img-fluid" alt="Enroll KC website screenshot">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/EnrollKC.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 4"><i class="fa-solid fa-plus"></i></a>
-                <a href="http://www.enrollKC.org" title="Enroll KC website screenshot"><i class="fa-solid fa-link"></i></a>
+            <div class="col-lg-3 col-md-3 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/kcps.png"
+                  class="img-fluid"
+                  alt="Kansas City Public Schools Website screenshot"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/kcps.png"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 3"
+                    ><i class="fa-solid fa-plus"></i
+                  ></a>
+                  <a
+                    href="http://www.kcpublicschools.org"
+                    title="Kansas City Public Schools Website"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--div class="col-lg-4 col-md-6 portfolio-item filter-dev">
+            <div class="col-lg-3 col-md-3 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/EnrollKC.png"
+                  class="img-fluid"
+                  alt="Enroll KC website screenshot"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/EnrollKC.png"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 4"
+                    ><i class="fa-solid fa-plus"></i
+                  ></a>
+                  <a
+                    href="http://www.enrollKC.org"
+                    title="Enroll KC website screenshot"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!--div class="col-lg-4 col-md-6 portfolio-item filter-dev">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/calc.png" class="img-fluid" alt="Screenshot of Supplier Calculator Development work">
               <div class="portfolio-links">
@@ -510,117 +847,173 @@
               </div>
             </div>
           </div-->
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>I provide a variety of services, mostly surrounding web and graphic technologies.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="fa-solid fa-anchor"></i></div>
-            <h4 class="title"><a href="">Brand &amp; Strategy</a></h4>
-            <p class="description">I can help you build your brand. From look and feel to how to gain followers on social media.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
-            <h4 class="title"><a href="">Web &amp; Interface</a></h4>
-            <p class="description">Websites, graphics, email templates &amp; campaigns - the list could go on and on.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="fa-solid fa-chart-pie"></i></div>
-            <h4 class="title"><a href="">Analytics</a></h4>
-            <p class="description">I can help with setting up analytics on your website, and putting together reports &amp; tracking for web and/or social media.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="fa-solid fa-video"></i></div>
-            <h4 class="title"><a href="">Photo &amp; Video Editing</a></h4>
-            <p class="description">I can help with stockphotos, photography, photo or graphic manipulation, and video editing.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="fa-solid fa-window-restore"></i></div>
-            <h4 class="title"><a href="">Web Consultation</a></h4>
-            <p class="description">I can help with refreshing &amp; modernizing your website as well as checking for WCAG compliance.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="fa-solid fa-images"></i></div>
-            <h4 class="title"><a href="">Graphics &amp; Document Design</a></h4>
-            <p class="description">I can make your flyers, resumes, one-pagers and more look more inviting and pleasing to the eye.</p>
           </div>
         </div>
+      </section>
+      <!-- End Portfolio Section -->
 
-      </div>
-    </section><!-- End Services Section -->
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Services</h2>
+            <p>
+              I provide a variety of services, mostly surrounding web and
+              graphic technologies.
+            </p>
+          </div>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>The best way to contact me is via email. I have included my email address below. </p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-7 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="fa-solid fa-earth-americas"></i>
-                <h4>Location:</h4>
-                <p>Shawnee, KS</p>
-              </div>
-
-              <div class="email">
-                <i class="fa-solid fa-envelope-open-text"></i>
-                <h4>Email:</h4>
-                <p>meganlennek@gmail.com</p>
-              </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92731.7699211459!2d-94.91179709712763!3d39.027011126258685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0922b0bbb5afd%3A0x69f07b93b7a758e3!2sShawnee%2C%20KS!5e0!3m2!1sen!2sus!4v1748364037280!5m2!1sen!2sus" height="290" style="border:0; width:100%;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+              <div class="icon"><i class="fa-solid fa-anchor"></i></div>
+              <h4 class="title"><a href="">Brand &amp; Strategy</a></h4>
+              <p class="description">
+                I can help you build your brand. From look and feel to how to
+                gain followers on social media.
+              </p>
             </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h4 class="title"><a href="">Web &amp; Interface</a></h4>
+              <p class="description">
+                Websites, graphics, email templates &amp; campaigns - the list
+                could go on and on.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon"><i class="fa-solid fa-chart-pie"></i></div>
+              <h4 class="title"><a href="">Analytics</a></h4>
+              <p class="description">
+                I can help with setting up analytics on your website, and
+                putting together reports &amp; tracking for web and/or social
+                media.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fa-solid fa-video"></i></div>
+              <h4 class="title"><a href="">Photo &amp; Video Editing</a></h4>
+              <p class="description">
+                I can help with stockphotos, photography, photo or graphic
+                manipulation, and video editing.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon"><i class="fa-solid fa-window-restore"></i></div>
+              <h4 class="title"><a href="">Web Consultation</a></h4>
+              <p class="description">
+                I can help with refreshing &amp; modernizing your website as
+                well as checking for WCAG compliance.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="icon"><i class="fa-solid fa-images"></i></div>
+              <h4 class="title">
+                <a href="">Graphics &amp; Document Design</a>
+              </h4>
+              <p class="description">
+                I can make your flyers, resumes, one-pagers and more look more
+                inviting and pleasing to the eye.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
 
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>
+              The best way to contact me is via email. I have included my email
+              address below.
+            </p>
           </div>
 
+          <div class="row" data-aos="fade-in">
+            <div class="col-lg-7 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                  <i class="fa-solid fa-earth-americas"></i>
+                  <h4>Location:</h4>
+                  <p>Shawnee, KS</p>
+                </div>
+
+                <div class="email">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <h4>Email:</h4>
+                  <p>meganlennek@gmail.com</p>
+                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92731.7699211459!2d-94.91179709712763!3d39.027011126258685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0922b0bbb5afd%3A0x69f07b93b7a758e3!2sShawnee%2C%20KS!5e0!3m2!1sen!2sus!4v1748364037280!5m2!1sen!2sus"
+                  height="290"
+                  style="border: 0; width: 100%"
+                  allowfullscreen="true"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
 
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <br /><strong
+            ><span
+              >Batchelor Consulting &amp; Design.<br />
+              All Rights Reserved.</span
+            ></strong
+          >
+        </div>
       </div>
-    </section><!-- End Contact Section -->
+    </footer>
+    <!-- End  Footer -->
 
-  </main><!-- End #main -->
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="fa-solid fa-angle-up"></i
+    ></a>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <br /><strong><span>Batchelor Consulting &amp; Design.<br /> All Rights Reserved.</span></strong>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-angle-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
