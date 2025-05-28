@@ -1,11 +1,12 @@
 {
   "threshold": 0,
-  "reporters": [
-    "consoleFull"
-  ],
+  "reporters": ["consoleFull"],
   "ignore": [
     "**/__snapshots__/**",
-    "website/index.html"
+    "website/index.html",
+    "**/node_modules/**",
+    "**/website/assets/vendor/**"
   ],
+  "min-lines": 10,
   "absolute": true
 }

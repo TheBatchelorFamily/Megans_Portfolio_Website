@@ -21,6 +21,8 @@ on:
   pull_request:
     branches: [master, main]
 
+permissions: {}
+
 ###############
 # Set the Job #
 ###############
@@ -31,6 +33,11 @@ jobs:
     # Set the agent to run on
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+
     ##################
     # Load all steps #
     ##################
@@ -39,19 +46,20 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Full git history is needed to get a list of changed files
           fetch-depth: 0
 
+      # Install stylelint config and dependencies BEFORE running Super Linter
       - name: install stylelint for twitter bootstrap
-        run: npm install stylelint-config-twbs-bootstrap --save-dev
+        run: npm install stylelint-config-twbs-bootstrap --save-dev --legacy-peer-deps
 
       ################################
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter/slim@v4
+        uses: github/super-linter/slim@v7
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
