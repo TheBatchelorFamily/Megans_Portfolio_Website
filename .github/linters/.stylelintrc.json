@@ -7,5 +7,6 @@
     "media-feature-name-no-vendor-prefix": null,
     "at-rule-no-vendor-prefix": null
   },
-  "ignoreFiles": ["**/WhiteLabel/**/*.css"]
+  "ignoreFiles": ["**/WhiteLabel/**/*.css", "**/vendor/**"],
+  "allowEmptyInput": true
 }

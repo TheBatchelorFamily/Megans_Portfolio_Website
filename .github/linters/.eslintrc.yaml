@@ -7,6 +7,8 @@ env:
 ignorePatterns:
   - "!.*"
   - "**/node_modules/.*"
+  - "website/assets/vendor/**"
+  - "**/vendor/**"
 
 globals:
   Atomics: readonly

@@ -61,6 +61,8 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter/slim@v7
         env:
+          FIX_HTML_PRETTIER: true
+          FIX_CSS_PRETTIER: true
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
