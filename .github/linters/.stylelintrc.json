@@ -8,5 +8,8 @@
     "at-rule-no-vendor-prefix": null,
     "allowEmptyInput": true
   },
-  "ignoreFiles": ["**/WhiteLabel/**/*.css"]
+  "ignoreFiles": [
+    "**/WhiteLabel/**/*.css",
+    "**/vendor/**"
+  ]
 }
