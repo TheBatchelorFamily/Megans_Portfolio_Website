@@ -5,6 +5,11 @@ module "aws_webserver_network" {
   secgroupname = "itsmeganificent-Group"
   sshIP        = ["136.32.167.156/32"]
   tags         = var.tags
+
+  providers = {
+    aws           = aws
+    aws.us_east_1 = aws.us_east_1
+  }
 }
 
 module "aws_auto_scale" {
