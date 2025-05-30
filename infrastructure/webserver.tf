@@ -25,7 +25,7 @@ module "aws_auto_scale" {
     {
       eipID : module.aws_webserver_network.aws_eip_alloID,
       region : var.region,
-      tag : "2.1.0"
+      tag : "2.1.1"
     }
   ))
 }
