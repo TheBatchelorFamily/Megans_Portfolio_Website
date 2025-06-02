@@ -8,3 +8,8 @@ variable "tags" {
   description = "Tags to apply to created resources"
   type        = map(string)
 }
+variable "image_tag" {
+  description = "The tag of the container image to deploy"
+  type        = string
+  default     = "latest"
+}
