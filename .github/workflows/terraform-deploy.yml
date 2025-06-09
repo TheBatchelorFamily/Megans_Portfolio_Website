@@ -9,6 +9,8 @@ on:
       - "!infrastructure/*.md"
       - ".github/workflows/terraform-deploy.yml"
   workflow_dispatch:
+  release:
+    types: [published]
 
 # Remove top-level permissions to avoid write-all
 permissions: {}
