@@ -20,7 +20,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@1.1.1
+    uses: TheBatchelorFamily/SharedGHA/.github/workflows/terraform_deploy.yml@1.1.2
     with:
       checkoutBranch: main
       deployLatestTag: true
