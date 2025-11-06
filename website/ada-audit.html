@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Its Meganificent - Portfolio</title>
+    <meta
+      name="description"
+      content="Consulting and web design in the heart of the plains Kansas City"
+    />
+    <meta
+      name="keywords"
+      content="freelance, consulting, web development, web design, bootstrap, html5, css3, mobile first, responsive, kansas city, KC"
+    />
+    <meta name="author" content="Megan Batchelor" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+       #audit-results {
+  white-space: pre-wrap;
+  background: #f9f9f9;
+  padding: 1em;
+  border: 1px solid #ccc;
+  margin-top: 1em;
+  font-family: monospace;
+}
+ 
+    </style>
+
+    <!-- Font Awesome Icon Kit-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>ADA Audit Tool</h1>
+<label for="site-url">Enter a URL to audit:</label>
+<input type="text" id="site-url" placeholder="https://example.com" />
+<button id="load-site">Load and Audit</button>
+
+<iframe id="audit-frame" sandbox="allow-scripts" style="width:100%; height:400px; border:1px solid #ccc;"></iframe>
+<pre id="audit-results"></pre>
+
+    <small>This tool uses axe-core and is for educational/demo purposes.</small>
+
+    <!-- SCRIPTS-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.7.2/axe.min.js"></script>
+     <script>
+    document.getElementById('load-site').addEventListener('click', () => {
+  const url = document.getElementById('site-url').value;
+  const frame = document.getElementById('audit-frame');
+  frame.src = url;
+
+  frame.onload = () => {
+    try {
+      axe.run(frame.contentDocument, {}, (err, results) => {
+        if (err) throw err;
+
+        const output = results.violations.map(v => {
+          return `❌ ${v.help} (${v.id})\n${v.nodes.map(n => `→ ${n.target.join(', ')}`).join('\n')}\n`;
+        }).join('\n');
+
+        document.getElementById('audit-results').textContent = output || '✅ No violations found!';
+      });
+    } catch (e) {
+      document.getElementById('audit-results').textContent =
+        '⚠️ Unable to audit this site due to browser security restrictions.';
+    }
+  };
+});
+
+ 
+     </script>
+
+  </body>
+  </html>
