@@ -27,9 +27,3 @@ variable "publicIP" {
   type        = bool
   default     = true
 }
-
-variable "subnets" {
-  description = "List of subnet IDs for multi-AZ deployment"
-  type        = list(string)
-  default     = ["subnet-0beea67bf6470d712"]
-}
