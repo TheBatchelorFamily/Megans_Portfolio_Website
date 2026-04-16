@@ -57,29 +57,30 @@ jobs:
       - name: Lint Code Base
         uses: super-linter/super-linter@v8
         env:
-          FIX_HTML_PRETTIER: true
-          FIX_CSS_PRETTIER: true
           FIX_CSS: true
-          FIX_SPELL_CODESPELL: true
-          FIX_YAML_PRETTIER: true
-          FIX_JSON_PRETTIER: true
+          FIX_CSS_PRETTIER: true
+          FIX_HTML_PRETTIER: true
           FIX_JSON: true
-          FIX_TERRAFORM_FMT: true
-          FIX_MARKDOWN_PRETTIER: true
+          FIX_JSON_PRETTIER: true
           FIX_MARKDOWN: true
+          FIX_MARKDOWN_PRETTIER: true
+          FIX_SPELL_CODESPELL: true
+          FIX_TERRAFORM_FMT: true
+          FIX_YAML_PRETTIER: true
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_BIOME_FORMAT: false
           VALIDATE_BIOME_LINT: false
           VALIDATE_PYTHON_BLACK: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SAVE_SUPER_LINTER_SUMMARY: true
 
       - name: Create Pull Request with fixes
         if: always() # Run even if the linter found errors
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "style: fix linting and formatting issues"
+          commit-message: "chore: fix linting and formatting issues"
           title: "Fix linting issues found by Super-Linter"
           body: "This is an automated PR containing formatting fixes suggested by Biome and Prettier."
           branch: superlinter-fixes # The name of the new branch for the PR
