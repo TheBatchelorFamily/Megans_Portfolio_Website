@@ -62,3 +62,15 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request with fixes
+        if: always() # Run even if the linter found errors
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "style: fix linting and formatting issues"
+          title: "Fix linting issues found by Super-Linter"
+          body: "This is an automated PR containing formatting fixes suggested by Biome and Prettier."
+          branch: superlinter-fixes # The name of the new branch for the PR
+          base: ${{ github.head_ref }} # The branch you are currently working on
+          delete-branch: true
