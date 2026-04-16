@@ -37,7 +37,7 @@ h6 {
   background: #149ddd;
   border-radius: 50px;
   opacity: 0;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .back-to-top i {
@@ -84,7 +84,7 @@ h6 {
   margin-bottom: 8px;
   font-size: 15px;
   color: #a8a9b4;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav-menu a:hover i,
@@ -124,11 +124,12 @@ h6 {
   line-height: 0;
   color: #fff;
   cursor: pointer;
-  /*background-color: #149ddd;
+
+  /* background-color: #149ddd;
   border: 0;
-  border-radius: 50px;*/
+  border-radius: 50px; */
   outline: none !important;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .mobile-nav-active {
@@ -138,7 +139,6 @@ h6 {
 .mobile-nav-active #header {
   left: 0;
 }
-
 
 /* --------------------------------------------------------------
 # Header
@@ -154,8 +154,8 @@ h6 {
   padding: 0 15px;
   overflow-y: auto;
   background: #040b14;
-  transition: all ease-in-out .5s;
-  transition: all .5s;
+  transition: all ease-in-out 0.5s;
+  transition: all 0.5s;
 }
 
 #header .profile img {
@@ -187,7 +187,7 @@ h6 {
   text-align: center;
   background: #212431;
   border-radius: 50%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 #header .profile h1 a,
@@ -195,7 +195,6 @@ h6 {
   color: #fff;
   text-decoration: none;
 }
-
 
 #header .profile .social-links a:hover {
   color: #fff;
@@ -207,7 +206,7 @@ h6 {
   margin-left: 300px;
 }
 
-@media (max-width: 1199px) {
+@media (width <= 1199px) {
   #header {
     left: -300px;
   }
@@ -230,10 +229,7 @@ h6 {
 
 #hero::before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
   content: "";
   background: rgb(5 13 24 / 30%);
@@ -267,13 +263,13 @@ h6 {
   border-bottom: 3px solid #149ddd;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   #hero {
     background-attachment: fixed;
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -408,7 +404,7 @@ section {
   font-size: 15px;
   font-weight: 600;
   color: #122f57;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 .facts .count-box a:hover {
@@ -450,7 +446,7 @@ section {
   width: 1px;
   height: 10px;
   background-color: #149ddd;
-  transition: .9s;
+  transition: 0.9s;
 }
 
 /* --------------------------------------------------------------
@@ -543,7 +539,7 @@ section {
   color: #272829;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio #portfolio-flters li:hover,
@@ -559,20 +555,17 @@ section {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .portfolio .portfolio-wrap::before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 2;
   content: "";
   background: rgb(255 255 255 / 50%);
   opacity: 0;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -584,7 +577,7 @@ section {
   display: flex;
   justify-content: center;
   opacity: 1;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
@@ -593,7 +586,7 @@ section {
   color: #fff;
   text-align: center;
   background: rgb(20 157 221 / 75%);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -605,10 +598,7 @@ section {
 }
 
 .portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   opacity: 1;
 }
 
@@ -634,7 +624,10 @@ section {
   margin-top: 20px;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -642,7 +635,10 @@ section {
   opacity: 1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #149ddd;
 }
 
@@ -691,22 +687,25 @@ article {
   --fur: #f09757;
   --fur-dark: #ed7b2a;
   --skin: pink;
+
   font-size: 0.6vmin;
   width: 80em;
   aspect-ratio: 1;
   position: relative;
-  
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     position: absolute;
     box-sizing: border-box;
   }
-  
+
   #alt {
     width: 1px;
     height: 1px;
     overflow: hidden;
   }
-  
+
   .shadow {
     width: 75%;
     height: 5%;
@@ -716,7 +715,7 @@ article {
     left: 50%;
     translate: -50%;
   }
- 
+
   .tail {
     width: 50%;
     height: 50%;
@@ -727,7 +726,7 @@ article {
     clip-path: polygon(100% 0, 100% 100%, 0 30%, 0 0);
     top: 75%;
     left: 52%;
-    
+
     &::before {
       content: "";
       width: 7em;
@@ -738,29 +737,29 @@ article {
       top: -9%;
     }
   }
-  
+
   .body {
     left: 50%;
     translate: -50%;
     bottom: 0;
     width: 35%;
     height: 40%;
-    background: 
+    background:
       radial-gradient(100% 80% at 50% 0, var(--fur-dark) 50%, #0000 0),
       var(--fur);
     border-radius: 100% / 200% 200% 20% 20%;
-    
+
     .leg {
       width: 165%;
-      height:38%;
+      height: 38%;
       background: var(--fur);
       bottom: 0;
-      left:50%;
+      left: 50%;
       translate: -50%;
       border-radius: 8em 8em 100% 100% / 10em 10em 16em 16em;
       scale: 1 -1;
     }
-    
+
     .paw {
       width: 35%;
       height: 49%;
@@ -769,10 +768,10 @@ article {
       border-radius: 0 0 5em 5em;
       border-bottom: 0.85em solid #ed7b2a;
       top: 48%;
-      rotatE: -10deg;
+      rotate: -10deg;
       left: 10%;
       clip-path: polygon(0 20%, 100% 30%, 100% 100%, 0 100%);
-      
+
       & + & {
         right: 7%;
         height: 50%;
@@ -783,30 +782,28 @@ article {
       }
     }
   }
-  
+
   .ear {
     width: 40%;
     aspect-ratio: 1;
     border: 4em solid var(--fur);
     border-radius: 5% 90% 10% 80%;
     background: var(--skin);
-    
+
     & + & {
       scale: -1 1;
       right: 0;
     }
   }
-  
+
   .head {
     width: 80%;
     aspect-ratio: 1.1;
-    background: 
-      linear-gradient(rgb(0 0 0 / 7.6%), #0000 20%),
-      var(--fur);
+    background: linear-gradient(rgb(0 0 0 / 7.6%), #0000 20%), var(--fur);
     left: 50%;
     translate: -50%;
     border-radius: 100% / 125% 125% 80% 75%;
-    
+
     .whisker {
       width: 30%;
       height: 30%;
@@ -815,62 +812,63 @@ article {
       border-top-color: var(--fur);
       border-left-color: var(--fur);
       clip-path: polygon(100% 0, 100% 100%, 0 30%, 0 0);
-      
+
       &:nth-child(1) {
         top: 70%;
         translate: -65%;
       }
+
       &:nth-child(2) {
         top: 80%;
         translate: -40%;
-        rotate: -20deg
+        rotate: -20deg;
       }
-      
+
       &:nth-child(3) {
         right: 0%;
         top: 70%;
         translate: 65%;
         rotate: 10deg;
       }
+
       &:nth-child(4) {
         right: 0;
         top: 80%;
         translate: 40%;
-        rotate: 24deg
+        rotate: 24deg;
       }
     }
-    
+
     .nose {
       width: 10%;
       height: 7%;
       background: var(--skin);
       border-radius: 50%;
-      top: 75%;
       left: 50%;
       translate: -50% -50%;
       top: 78%;
     }
-    
+
     .eye {
       --pos: 27%;
       --x1: 70%;
       --x2: 78%;
+
       width: 35%;
       aspect-ratio: 1;
       border-radius: 50%;
-      background: 
+      background:
         radial-gradient(60% 50% at var(--x1) 37%, #fff 15%, #0000 0),
         radial-gradient(50% 50% at var(--x2) 55%, #fff 12%, #0000 0),
-        radial-gradient(circle at 60% 55%, #000 35%, #0000 0),
-        rgb(43, 250, 133);
-      top: 60%;
+        radial-gradient(circle at 60% 55%, #000 35%, #0000 0), rgb(43 250 133);
       left: var(--pos);
       translate: -50% -50%;
       top: 63%;
-      
+
       & + & {
         --x1: 70%;
         --x2: 78%;
+
         left: calc(100% - var(--pos));
         scale: -1 1;
       }
@@ -896,7 +894,7 @@ article {
   background: #149ddd;
   border: 1px solid #149ddd;
   border-radius: 50%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .services .icon i {
@@ -1053,7 +1051,7 @@ article {
   color: #149ddd;
   background: #dff3fc;
   border-radius: 50px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact .info h4 {
@@ -1091,7 +1089,7 @@ article {
   text-align: center;
   background: #333;
   border-radius: 50%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .contact .info .social-links a:hover {
@@ -1196,7 +1194,7 @@ article {
   background: #149ddd;
   border: 0;
   border-radius: 4px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1257,7 +1255,7 @@ article {
   content: "/";
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .breadcrumbs .d-flex {
     display: block !important;
   }
@@ -1298,7 +1296,7 @@ article {
   text-align: center;
 }
 
-@media (max-width: 1199px) {
+@media (width <= 1199px) {
   #footer {
     position: static;
     width: auto;
