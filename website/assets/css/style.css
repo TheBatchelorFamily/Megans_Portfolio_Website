@@ -25,6 +25,7 @@ h6 {
 /* --------------------------------------------------------------
 # Back to top button
 -------------------------------------------------------------- */
+
 .back-to-top {
   position: fixed;
   right: 15px;
@@ -53,81 +54,6 @@ h6 {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}
-
-/* --------------------------------------------------------------
-# Header
--------------------------------------------------------------- */
-#header {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9997;
-  width: 300px;
-  padding: 0 15px;
-  overflow-y: auto;
-  background: #040b14;
-  transition: all ease-in-out .5s;
-  transition: all .5s;
-}
-
-#header .profile img {
-  display: block;
-  width: 120px;
-  margin: 15px auto;
-  border: 8px solid #2c2f3f;
-}
-
-#header .profile h1 {
-  padding: 0;
-  margin: 0;
-  font-family: Poppins, sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
-}
-
-#header .profile h1 a,
-#header .profile h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-#header .profile .social-links a {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  padding: 8px 0;
-  margin-right: 4px;
-  font-size: 18px;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  background: #212431;
-  border-radius: 50%;
-  transition: .3s;
-}
-
-#header .profile .social-links a:hover {
-  color: #fff;
-  text-decoration: none;
-  background: #149ddd;
-}
-
-#main {
-  margin-left: 300px;
-}
-
-@media (max-width: 1199px) {
-  #header {
-    left: -300px;
-  }
-
-  #main {
-    margin-left: 0;
-  }
 }
 
 /* --------------------------------------------------------------
@@ -161,6 +87,13 @@ h6 {
   transition: .3s;
 }
 
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i {
+  color: #149ddd;
+}
+
 .nav-menu a i,
 .nav-menu a:focus i {
   padding-right: 8px;
@@ -174,13 +107,6 @@ h6 {
 .nav-menu li:hover > a {
   color: #fff;
   text-decoration: none;
-}
-
-.nav-menu a:hover i,
-.nav-menu .active i,
-.nav-menu .active:focus i,
-.nav-menu li:hover > a i {
-  color: #149ddd;
 }
 
 /* Mobile Navigation */
@@ -213,9 +139,88 @@ h6 {
   left: 0;
 }
 
+
+/* --------------------------------------------------------------
+# Header
+-------------------------------------------------------------- */
+
+#header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9997;
+  width: 300px;
+  padding: 0 15px;
+  overflow-y: auto;
+  background: #040b14;
+  transition: all ease-in-out .5s;
+  transition: all .5s;
+}
+
+#header .profile img {
+  display: block;
+  width: 120px;
+  margin: 15px auto;
+  border: 8px solid #2c2f3f;
+}
+
+#header .profile h1 {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+#header .profile .social-links a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  padding: 8px 0;
+  margin-right: 4px;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  background: #212431;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+#header .profile .social-links a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #149ddd;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+
 /* --------------------------------------------------------------
 # Hero Section
 -------------------------------------------------------------- */
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -231,7 +236,7 @@ h6 {
   left: 0;
   z-index: 1;
   content: "";
-  background: rgba(5, 13, 24, .3);
+  background: rgb(5 13 24 / 30%);
 }
 
 #hero .hero-container {
@@ -284,6 +289,7 @@ h6 {
 /* --------------------------------------------------------------
 # Sections General
 -------------------------------------------------------------- */
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -324,6 +330,7 @@ section {
 /* --------------------------------------------------------------
 # About
 -------------------------------------------------------------- */
+
 .about .content h3 {
   font-size: 26px;
   font-weight: 700;
@@ -359,6 +366,7 @@ section {
 /* --------------------------------------------------------------
 # Facts
 -------------------------------------------------------------- */
+
 .facts {
   padding-bottom: 30px;
 }
@@ -410,6 +418,7 @@ section {
 /* --------------------------------------------------------------
 # Skills
 -------------------------------------------------------------- */
+
 .skills .progress {
   display: block;
   height: 60px;
@@ -447,6 +456,7 @@ section {
 /* --------------------------------------------------------------
 # Resume
 -------------------------------------------------------------- */
+
 .resume .resume-title {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -508,6 +518,7 @@ section {
 /* --------------------------------------------------------------
 # Portfolio
 -------------------------------------------------------------- */
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -559,7 +570,7 @@ section {
   left: 0;
   z-index: 2;
   content: "";
-  background: rgba(255, 255, 255, .5);
+  background: rgb(255 255 255 / 50%);
   opacity: 0;
   transition: all ease-in-out .3s;
 }
@@ -581,12 +592,12 @@ section {
   font-size: 28px;
   color: #fff;
   text-align: center;
-  background: rgba(20, 157, 221, .75);
+  background: rgb(20 157 221 / 75%);
   transition: .3s;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, .95);
+  background: rgb(20 157 221 / 95%);
 }
 
 .portfolio .portfolio-wrap .portfolio-links a + a {
@@ -609,6 +620,7 @@ section {
 /* --------------------------------------------------------------
 # Portfolio Details
 -------------------------------------------------------------- */
+
 .portfolio-details {
   padding-top: 40px;
 }
@@ -636,7 +648,7 @@ section {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0 0 30px rgba(5, 13, 24, .08);
+  box-shadow: 0 0 30px rgb(5 13 24 / 8%);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -674,6 +686,7 @@ section {
 /* --------------------------------------------------------------
 # Portofolio - CSS Art
 -------------------------------------------------------------- */
+
 article {
   --fur: #f09757;
   --fur-dark: #ed7b2a;
@@ -788,7 +801,7 @@ article {
     width: 80%;
     aspect-ratio: 1.1;
     background: 
-      linear-gradient(rgba(0, 0, 0, 0.076), #0000 20%),
+      linear-gradient(rgb(0 0 0 / 7.6%), #0000 20%),
       var(--fur);
     left: 50%;
     translate: -50%;
@@ -868,6 +881,7 @@ article {
 /* --------------------------------------------------------------
 # Services
 -------------------------------------------------------------- */
+
 .services .icon-box {
   margin-bottom: 20px;
 }
@@ -923,6 +937,7 @@ article {
 /* --------------------------------------------------------------
 # Testimonials
 -------------------------------------------------------------- */
+
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -980,7 +995,7 @@ article {
   font-style: italic;
   background: #fff;
   border-radius: 6px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
 }
 
 .testimonials .testimonial-item p::after {
@@ -1015,6 +1030,7 @@ article {
 /* --------------------------------------------------------------
 # Contact
 -------------------------------------------------------------- */
+
 .contact {
   padding-bottom: 130px;
 }
@@ -1023,7 +1039,7 @@ article {
   width: 100%;
   padding: 30px;
   background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
 }
 
 .contact .info i {
@@ -1094,7 +1110,7 @@ article {
   width: 100%;
   padding: 30px;
   background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
 }
 
 .contact .php-email-form .form-group {
@@ -1210,6 +1226,7 @@ article {
 /* --------------------------------------------------------------
 # Breadcrumbs
 -------------------------------------------------------------- */
+
 .breadcrumbs {
   padding: 20px 0;
   background: #f9f9f9;
@@ -1257,6 +1274,7 @@ article {
 /* --------------------------------------------------------------
 # Footer
 -------------------------------------------------------------- */
+
 #footer {
   position: fixed;
   bottom: 0;
