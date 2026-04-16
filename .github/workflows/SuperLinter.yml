@@ -46,7 +46,7 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # Full git history is needed to get a list of changed files
           fetch-depth: 0
@@ -77,7 +77,7 @@ jobs:
 
       - name: Create Pull Request with fixes
         if: always() # Run even if the linter found errors
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: fix linting and formatting issues"
