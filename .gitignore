@@ -114,3 +114,7 @@ yarn-error.log*
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Super_Linter
+super-linter-output/
+github_conf/
