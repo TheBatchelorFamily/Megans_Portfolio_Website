@@ -1,7 +1,6 @@
 module "aws_webserver_network" {
   #checkov:skip=CKV_TF_2: point to branch for testing
   source       = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_webserver_network?ref=main"
-  region       = var.region
   secgroupname = "itsmeganificent-Group"
   sshIP        = ["136.32.167.156/32"]
   tags         = var.tags
