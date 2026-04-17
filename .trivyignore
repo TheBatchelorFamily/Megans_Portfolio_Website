@@ -8,3 +8,5 @@ AWS-0104
 AWS-0010
 # Not using customer managed keys for S3 buckets in portfolio site
 AWS-0136
+# Not using s3 logging for portfolio site
+AWS-0089
