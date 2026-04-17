@@ -3,6 +3,8 @@ body {
   color: #272829;
 }
 
+/* stylelint-disable no-descending-specificity */
+
 a {
   color: #149ddd;
   text-decoration: none;
@@ -87,18 +89,18 @@ h6 {
   transition: 0.3s;
 }
 
-.nav-menu a:hover i,
-.nav-menu .active i,
-.nav-menu .active:focus i,
-.nav-menu li:hover > a i {
-  color: #149ddd;
-}
-
 .nav-menu a i,
 .nav-menu a:focus i {
   padding-right: 8px;
   font-size: 24px;
   color: #6f7180;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i {
+  color: #149ddd;
 }
 
 .nav-menu a:hover,
@@ -1113,6 +1115,7 @@ article {
 
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .contact .php-email-form .validate {
@@ -1163,10 +1166,6 @@ article {
   border-radius: 50%;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form .form-group {
-  margin-bottom: 15px;
 }
 
 .contact .php-email-form label {
@@ -1300,6 +1299,6 @@ article {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    padding: 20px 15px;
   }
 }
