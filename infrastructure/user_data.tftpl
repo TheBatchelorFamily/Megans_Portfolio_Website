@@ -19,4 +19,4 @@ sudo usermod -a -G docker ec2-user
 docker pull "$CONTAINER"
 docker run -it -d -p 80:80 "$CONTAINER"
 # Associate the Elastic IP
-aws ec2 associate-address --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --region "$AWS_DEFAULT_REGION"
+aws ec2 associate-address --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --region "$AWS_DEFAULT_REGION" --allow-reassociation
