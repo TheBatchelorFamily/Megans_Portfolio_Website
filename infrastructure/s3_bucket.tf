@@ -20,3 +20,29 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" 
     }
   }
 }
+
+resource "aws_s3_bucket_versioning" "terraform_state_versioning" {
+  bucket = aws_s3_bucket.terraform_state.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "terraform_state_lifecycle" {
+  bucket = aws_s3_bucket.terraform_state.id
+
+  rule {
+    id     = "cleanup-old-versions"
+    status = "Enabled"
+
+    # Deletes non-current versions after 30 days
+    noncurrent_version_expiration {
+      noncurrent_days = 30
+    }
+
+    # Cleans up "Delete Markers" or incomplete uploads to save space
+    abort_incomplete_multipart_upload {
+      days_after_initiation = 7
+    }
+  }
+}

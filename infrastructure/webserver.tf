@@ -1,6 +1,6 @@
 module "aws_webserver_network" {
   #checkov:skip=CKV_TF_2: point to branch for testing
-  source       = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_webserver_network?ref=cloudfront"
+  source       = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_webserver_network?ref=main"
   region       = var.region
   secgroupname = "itsmeganificent-Group"
   sshIP        = ["136.32.167.156/32"]
@@ -17,7 +17,7 @@ module "aws_auto_scale" {
   keyname       = var.keyname
   publicIP      = var.publicIP
   securityGroup = [module.aws_webserver_network.aws_security_group_id]
-  source        = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=cloudfront"
+  source        = "github.com/TheBatchelorFamily/SharedTerraform.git//modules/aws_auto_scale?ref=main"
   sshPub        = file("./webserver.pub")
   tags          = var.tags
   userData = base64encode(templatefile(

@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^5.3.3",
+    "font-awesome": "^4.7.0",
+    "glightbox": "^3.2.0",
+    "swiper": "^11.1.3"
+  }
+}

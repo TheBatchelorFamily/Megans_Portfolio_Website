@@ -72,9 +72,11 @@ jobs:
           VALIDATE_BIOME_FORMAT: false
           VALIDATE_BIOME_LINT: false
           VALIDATE_PYTHON_BLACK: false
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SAVE_SUPER_LINTER_SUMMARY: true
+          ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
 
       - name: Create Pull Request with fixes
         if: always() # Run even if the linter found errors
