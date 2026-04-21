@@ -85,7 +85,7 @@ h6 {
   padding: 12px 15px;
   margin-bottom: 8px;
   font-size: 15px;
-  color: #a8a9b4;
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -93,7 +93,7 @@ h6 {
 .nav-menu a:focus i {
   padding-right: 8px;
   font-size: 24px;
-  color: #6f7180;
+  color: #fff;
 }
 
 .nav-menu a:hover i,
@@ -107,7 +107,7 @@ h6 {
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover > a {
-  color: #fff;
+  color: #149ddd;
   text-decoration: none;
 }
 
@@ -449,6 +449,11 @@ section {
   height: 10px;
   background-color: #149ddd;
   transition: 0.9s;
+}
+
+.skills-content p > i {
+  font-size: 2em;
+  color: #149ddd;
 }
 
 /* --------------------------------------------------------------
