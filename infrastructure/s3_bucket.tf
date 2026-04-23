@@ -34,6 +34,9 @@ resource "aws_s3_bucket_lifecycle_configuration" "terraform_state_lifecycle" {
   rule {
     id     = "cleanup-old-versions"
     status = "Enabled"
+    filter {
+      prefix = ""
+    }
 
     # Deletes non-current versions after 30 days
     noncurrent_version_expiration {
