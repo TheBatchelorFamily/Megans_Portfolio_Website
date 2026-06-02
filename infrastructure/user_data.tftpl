@@ -9,10 +9,7 @@ AWS_DEFAULT_REGION="${region}"
 
 set -ex
 sudo dnf update -y
-packages=(curl awscli docker unzip)
-for pkg in "$${packages[@]}"; do
-  sudo dnf install -y "$pkg"
-done
+sudo dnf install -y --allowerasing curl awscli docker unzip
 
 hash -r
 sudo systemctl enable --now docker
@@ -35,7 +32,7 @@ fi
 
 # Associate the Elastic IP, retrying while the instance prepares.
 attempt=0
-until aws ec2 associate-address --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --region "$AWS_DEFAULT_REGION" --allow-reassociation; do
+until aws ec2 associate-address --instance-id "$${INSTANCE_ID}" --allocation-id "$${ALLOC_ID}" --region "$${AWS_DEFAULT_REGION}" --allow-reassociation; do
   attempt=$((attempt + 1))
   if [ $attempt -ge 10 ]; then
     echo "EIP association failed after $attempt attempts" >&2
