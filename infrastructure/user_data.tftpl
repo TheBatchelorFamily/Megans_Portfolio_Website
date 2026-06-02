@@ -9,9 +9,22 @@ AWS_DEFAULT_REGION="${region}"
 
 set -ex
 sudo dnf update -y
-sudo dnf install -y curl docker aws-cli unzip || sudo dnf install -y curl moby-engine aws-cli unzip || sudo dnf install -y curl docker awscli unzip || sudo dnf install -y curl moby-engine awscli unzip
+packages=(curl awscli docker unzip)
+for pkg in "${packages[@]}"; do
+  sudo dnf install -y "$pkg"
+done
+
+hash -r
 sudo systemctl enable --now docker
 sudo usermod -a -G docker ec2-user
+
+# Use IMDSv2 when metadata tokens are required.
+TOKEN=$(curl -sX PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+INSTANCE_ID=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
+
+docker pull "$CONTAINER"
+docker run --rm -d -p 80:80 "$CONTAINER"
+
 if ! command -v aws >/dev/null 2>&1; then
   sudo curl -fsSL "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o /tmp/awscli-bundle.zip
   sudo unzip -o /tmp/awscli-bundle.zip -d /tmp
@@ -19,13 +32,6 @@ if ! command -v aws >/dev/null 2>&1; then
     sudo /tmp/awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
   fi
 fi
-
-docker pull "$CONTAINER"
-docker run --rm -d -p 80:80 "$CONTAINER"
-
-# Use IMDSv2 when metadata tokens are required.
-TOKEN=$(curl -sX PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
-INSTANCE_ID=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
 
 # Associate the Elastic IP, retrying while the instance prepares.
 attempt=0
