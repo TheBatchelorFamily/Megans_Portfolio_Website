@@ -10,7 +10,7 @@ AWS_DEFAULT_REGION="${region}"
 set -ex
 sudo dnf update -y
 packages=(curl awscli docker unzip)
-for pkg in "${packages[@]}"; do
+for pkg in "$${packages[@]}"; do
   sudo dnf install -y "$pkg"
 done
 
